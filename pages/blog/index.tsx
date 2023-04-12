@@ -1,4 +1,4 @@
-import { pick } from "@contentlayer/client";
+import { pick } from "lib/pick";
 import { allPosts, Post } from ".contentlayer/generated";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";

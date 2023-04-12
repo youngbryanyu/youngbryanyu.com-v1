@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { allPosts, allProjects, Post, Project } from ".contentlayer/generated";
-import { pick } from "@contentlayer/client";
+import { pick } from "lib/pick";
 
 import Link from "components/Link";
 import Section from "components/Section";
@@ -78,8 +78,8 @@ export const getStaticProps: GetStaticProps = async () => {
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     )
     .filter((_, i) => i < 4)
-    .map((post) => pick(post, ["slug", "title", "publishedAt", "image"]));
-
+    .map((post) => pick(post, ["slug", "title", "publishedAt", "image"]))
+  
   const projects = allProjects
     .sort((a, b) => parseInt(b.time.slice(0, 4)) - parseInt(a.time.slice(0, 4)))
     .map((post) =>

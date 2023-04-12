@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import faunadb from "faunadb";
-import { pick } from "@contentlayer/client";
+import { pick } from "lib/pick";
 import { getMentionsForSlug } from "lib/webmentions";
 import { allPosts } from ".contentlayer/generated";
 

@@ -3,7 +3,7 @@ import slugify from "slugify";
 import { useRouter } from "next/router";
 
 // Utils
-import { pick } from "@contentlayer/client";
+import { pick } from "lib/pick";
 import { allPosts, Post } from "contentlayer/generated";
 import PostList from "components/postlist";
 import Link from "components/Link";

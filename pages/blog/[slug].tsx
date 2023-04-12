@@ -1,4 +1,4 @@
-import { pick } from "@contentlayer/client";
+import { pick } from "lib/pick";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allPosts, Post as PostType } from ".contentlayer/generated";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -44,15 +44,14 @@ export default function Post({ post, related }: PostProps) {
             modifiedTime: post.updatedAt,
             authors: [SiteURL],
           },
-          images: post.image ? 
-          [{
+          images: [{
             url: post.image
-              ? `https://${SiteURL}${post.image}`
-              : `https://og-image.samuelkraft.vercel.app/${encodeURIComponent(
+              ? `${SiteURL}${post.image}`
+              : `${SiteURL}/api/og?title=${encodeURIComponent(
                   post.title
-                )}?desc=${encodeURIComponent(seoDesc)}&theme=dark.png`,
+                )}`,
             alt: post.title,
-          }]: []
+          }]
         }}
       />
 

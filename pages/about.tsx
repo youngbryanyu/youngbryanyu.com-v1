@@ -13,7 +13,7 @@ import githubLogo from "public/Github.png";
 import avatar from "public/avatar.png";
 import { GetStaticProps } from "next";
 import { Project, allProjects } from "../.contentlayer/generated";
-import { pick } from "contentlayer/client";
+import { pick } from "lib/pick";
 
 export const connectLinks = [
   { label: "Email", href: "mailto:contact@zenan.ch" },
