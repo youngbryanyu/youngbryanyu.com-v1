@@ -6,9 +6,9 @@ const matter = require("gray-matter");
 
 async function generate() {
   const feed = new RSS({
-    title: "Samuel Kraft",
-    site_url: "https://samuelkraft.com",
-    feed_url: "https://samuelkraft.com/feed.xml",
+    title: FullName,
+    site_url: "https://zenan.ch",
+    feed_url: "https://zenan.ch/feed.xml",
   });
 
   const posts = await fs.readdir(path.join(__dirname, "..", "data", "blog"));
@@ -22,7 +22,7 @@ async function generate() {
 
       feed.item({
         title: frontmatter.data.title,
-        url: "https://samuelkraft.com/blog/" + name.replace(/\.mdx?/, ""),
+        url: "https://zenan.ch/blog/" + name.replace(/\.mdx?/, ""),
         date: frontmatter.data.publishedAt,
         description: frontmatter.data.summary,
       });

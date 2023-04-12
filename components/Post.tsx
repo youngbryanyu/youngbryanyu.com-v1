@@ -24,7 +24,6 @@ export default function Post({ post, mousePosition }: PostProps) {
   const imageHeight = 150;
   const imageWidth = 300;
   const imageOffset = 22;
-
   return (
     <li className="py-2.5 group">
       <div className="transition-opacity">

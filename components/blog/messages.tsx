@@ -7,41 +7,41 @@ export const TailBreakdown = () => (
   </ol>
 );
 
-const messages = [
-  { text: "Hey there! What's up", sent: true },
-  { text: "Checking out iOS7 you know.." },
-  { text: "Check out this bubble!", sent: true },
-  { text: "It's pretty cool!" },
-  { text: "And it's in css?" },
-  { text: "Yeah it's pure CSS & HTML", sent: true },
-  {
-    text: "(ok.. almost, I added a tiny bit of JS to remove sibling message tails)",
-    sent: true,
-  },
-  {
-    text: "Wow that's impressive. But what's even more impressive is that this bubble is really high.",
-  },
-];
+interface Message {
+  text: string;
+  sent?: boolean;
+}
 
-const Messages = (): JSX.Element => (
-  <ol className={cn(styles.list, "not-prose")}>
-    {messages.map(({ text, sent }, i) => {
-      const isLast = i === messages.length - 1;
-      const noTail = !isLast && messages[i + 1]?.sent === sent;
-      return (
-        <li
-          key={text}
-          className={cn(
-            styles.shared,
-            sent ? styles.sent : styles.received,
-            noTail && styles.noTail
-          )}
-        >
-          {text}
-        </li>
-      );
-    })}
-  </ol>
-);
+function Messages({
+  messages
+}: {
+  messages: Message[];
+  type: "warning" | "info";
+}): JSX.Element {
+  return (
+    <ol className={cn(styles.list, "not-prose")}>
+      {messages.map(({ text, sent }, i) => {
+        const isLast = i === messages.length - 1;
+        const noTail = !isLast && messages[i + 1]?.sent === sent;
+        return (
+          <li
+            key={text}
+            className={cn(
+              styles.shared,
+              sent ? styles.sent : styles.received,
+              noTail && styles.noTail
+            )}
+          >
+            {text}
+          </li>
+        );
+      })}
+    </ol>
+  )
+}
+
+// const Messages = (messages: Message[]): JSX.Element => (
+  
+// );
 
 export default Messages;

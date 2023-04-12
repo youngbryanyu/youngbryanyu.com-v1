@@ -1,23 +1,24 @@
 import { DefaultSeo } from "next-seo";
+import { FullName, SiteURL } from "../pages/about";
 
 const config = {
-  title: "Samuel Kraft - Design engineer",
-  description: "I design & build interfaces",
+  title: `${FullName}`,
+  description: "Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://samuelkraft.com",
-    site_name: "Samuel Kraft",
+    url: SiteURL,
+    site_name: FullName,
     images: [
       {
-        url: "https://samuelkraft.com/og.jpg",
-        alt: "Samuel Kraft",
+        url: `${SiteURL}/og.jpg`,
+        alt: FullName,
       },
     ],
   },
   twitter: {
-    handle: "@samuelkraft",
-    site: "@samuelkraft",
+    handle: "@chzenan",
+    site: "@chzenan",
     cardType: "summary_large_image",
   },
 };

@@ -6,10 +6,9 @@ import PostList from "components/postlist";
 import Input from "components/input";
 import { useState } from "react";
 import { IconSearch } from "components/Icons";
+import { FullName, seoDesc, SiteURL } from "../about";
 
-const seoTitle = "Blog | Samuel Kraft";
-const seoDesc =
-  "I write about development, design, React, CSS, animation and more!";
+const seoTitle = `Blog | ${FullName}`;
 
 type BlogProps = {
   posts: Post[];
@@ -31,9 +30,9 @@ export default function Blog({ posts }: BlogProps) {
         description={seoDesc}
         openGraph={{
           title: seoTitle,
-          url: `https://samuelkraft.com/blog/`,
+          url: `${SiteURL}/blog/`,
           description: seoDesc,
-          site_name: "Samuel Kraft",
+          site_name: FullName
         }}
         twitter={{
           cardType: "summary_large_image",
@@ -47,7 +46,7 @@ export default function Blog({ posts }: BlogProps) {
               className="text-secondary animate-in"
               style={{ "--index": 1 } as React.CSSProperties}
             >
-              I write about CSS, animation techniques, design systems and more.
+              I write about my research, technical stuff, my life, and more.
             </p>
           </div>
           <div

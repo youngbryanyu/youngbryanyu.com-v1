@@ -8,6 +8,7 @@ import { allPosts, Post } from "contentlayer/generated";
 import PostList from "components/postlist";
 import Link from "components/Link";
 import { NextSeo } from "next-seo";
+import { FullName, SiteURL } from "../../about";
 
 type TagProps = {
   posts: Post[];
@@ -18,9 +19,9 @@ const Tag = ({ posts }: TagProps): JSX.Element => {
   const { slug } = query as { slug: string };
   const tag = slug.replace("-", " ");
 
-  const seoTitle = `${tag} | Samuel Kraft`;
-  const seoDesc = `Posts &amp; tutorials about ${tag}`;
-  const url = `https://samuelkraft.com/blog/tag/${tag}`;
+  const seoTitle = `${tag} | ${FullName}`;
+  const seoDesc = `Posts about ${tag}`;
+  const url = `${SiteURL}/blog/tag/${tag}`;
 
   return (
     <>
@@ -42,7 +43,7 @@ const Tag = ({ posts }: TagProps): JSX.Element => {
               className="text-secondary animate-in"
               style={{ "--index": 1 } as React.CSSProperties}
             >
-              Posts &amp; tutorials about{" "}
+              Posts about{" "}
               <span className="capitalize">{tag}</span>
             </p>
           </div>
@@ -87,7 +88,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     )
     .map((post) =>
-      pick(post, ["slug", "title", "summary", "publishedAt", "image"])
+      pick(post, ["slug", "title", "summary", "publishedAt"])
     );
   return { props: { posts } };
 };

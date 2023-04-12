@@ -6,9 +6,7 @@ import Link from "components/Link";
 import Section from "components/Section";
 import PostList from "components/postlist";
 
-import BitrefillGraphic from "components/projects/BitrefillGraphic";
-import TrailRoutesGraphic from "components/projects/TrailRoutesGraphic";
-import TracklibGraphic from "components/projects/TracklibGraphic";
+import { FullName } from "./about";
 
 type HomeProps = {
   posts: Post[];
@@ -20,19 +18,19 @@ export default function Home({ posts, projects }: HomeProps) {
     <>
       <div className="flex flex-col gap-20 md:gap-28">
         <div>
-          <h1 className="animate-in">Samuel Kraft</h1>
+          <h1 className="animate-in">{`Zenan "Alan" Chen`}</h1>
           <p
             className="text-secondary animate-in"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            I design & build interfaces
+            Ph.D. candidate in Information Systems. <br></br> I study Technologies ✕ Productivity.
           </p>
         </div>
         <div
           className="flex flex-col gap-4 animate-in"
           style={{ "--index": 2 } as React.CSSProperties}
         >
-          <h2>Selected projects</h2>
+          <h2>Selected research projects</h2>
           <ul className="flex flex-col gap-16">
             {projects.map((project) => (
               <li key={project.title}>
@@ -42,14 +40,14 @@ export default function Home({ posts, projects }: HomeProps) {
                       <h3>{project.title}</h3>
                       <p className="text-secondary">{project.description}</p>
                       <Link href={`/project/${project.slug}`} underline>
-                        Read case study
+                        Read More
                       </Link>
                     </div>
-                    <Link href={`/project/${project.slug}`}>
+                    {/* <Link href={`/project/${project.slug}`}>
                       {project.slug === "tracklib" && <TracklibGraphic />}
                       {project.slug === "bitrefill" && <BitrefillGraphic />}
                       {project.slug === "trailroutes" && <TrailRoutesGraphic />}
-                    </Link>
+                    </Link> */}
                   </div>
                 </Section>
               </li>
@@ -60,10 +58,10 @@ export default function Home({ posts, projects }: HomeProps) {
           className="flex flex-col items-start gap-8 animate-in"
           style={{ "--index": 3 } as React.CSSProperties}
         >
-          <h2>Selected posts</h2>
+          <h2>Recent blog posts</h2>
           <PostList posts={posts} />
           <Link href="/blog" className="items-start underline">
-            See all →
+            See all posts
           </Link>
         </div>
       </div>
@@ -80,7 +78,9 @@ export const getStaticProps: GetStaticProps = async () => {
     .filter((_, i) => i < 4)
     .map((post) => pick(post, ["slug", "title", "publishedAt", "image"]));
 
-  const projects = allProjects.map((post) =>
+  const projects = allProjects
+    .sort((a, b) => parseInt(b.time.slice(0, 4)) - parseInt(a.time.slice(0, 4)))
+    .map((post) =>
     pick(post, ["slug", "title", "description", "time"])
   );
 

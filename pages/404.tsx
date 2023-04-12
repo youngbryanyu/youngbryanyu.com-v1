@@ -1,10 +1,11 @@
 import Link from "components/Link";
 import Head from "next/head";
+import { FullName } from "./about";
 
 const Custom404 = (): JSX.Element => (
   <>
     <Head>
-      <title>404 | Samuel Kraft</title>
+      <title>404 | { FullName }</title>
     </Head>
     <div className="flex flex-col gap-2">
       <h1>404 - Page not found</h1>

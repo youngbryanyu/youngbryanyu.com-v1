@@ -30,7 +30,7 @@ function Workplace({ title, description, imageSrc, time, link }: Workplace) {
     </>
   );
   return (
-    <li className="transition-opacity" key={description}>
+    <li className="" key={description}>
       {link ? (
         <Link
           href={link}
@@ -45,9 +45,9 @@ function Workplace({ title, description, imageSrc, time, link }: Workplace) {
   );
 }
 
-export default function Workplaces({ items }: { items: Workplace[] }) {
+export default function Workplaces({ items, isAnimated }: { items: Workplace[], isAnimated?: boolean }) {
   return (
-    <ul className="flex flex-col gap-8 animated-list">
+    <ul className={`flex flex-col gap-8 ${isAnimated ? 'animated-list' : ''}`}>
       {items.map(Workplace)}
     </ul>
   );

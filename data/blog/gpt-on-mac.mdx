@@ -1,0 +1,119 @@
+---
+title: 'Use ChatGPT Anywhere on your Mac'
+publishedAt: '2023-04-12'
+summary: 'Using Popclip and Raycast, you can invoke ChatGPT in any applications.'
+image: '/blog/gpt-on-mac/cover.png'
+tags: ["LLM", "GPT", "macOS", "Popclip", "Raycast", "AI"]
+---
+
+import { Tweet, Gist } from 'mdx-embed'
+
+I don't need to stress how ChatGPT is revolutionizing how we write. One of the frictions of using ChatGPT is that it is only available on the web, which can be a bit of a hassle when you are writing in other applications -- you need to open ChatGPT webpage, sign in, then copy and paste the context (for example, if you want it to summarize an paragraph or polish your writing). These small steps can add up quickly to hours of wasted time.
+
+What if you can call ChatGPT magically with a single click or a keyboard shortcut from any application? Read on.
+
+# Prerequisites
+
+1. A working OpenAI API key
+2. macOS
+
+# Popclip
+
+[Popclip](https://pilotmoon.com/popclip/) is a *paid* macOS app that pops up a tooltip when you select text in any application. It is quite powerful when combined with extensions. Here is a demo with the [ChatGPT extension](https://gist.github.com/alanzchen/57f69ed4c09cb2cf0111a8fcdb6ee6c0) I wrote.
+
+<Tweet tweetLink="chzenan/status/1631349915082428416" align="center" />
+
+To install this extension, select the following code and popclip should automatically prompt you to install.
+
+<Gist gistLink="alanzchen/57f69ed4c09cb2cf0111a8fcdb6ee6c0" />
+
+# Raycast
+
+[Raycast](https://www.raycast.com/) serves as both a launcher and a command center and it's one of my favorite macOS apps. I used to be a paying user of [Alfred](https://www.alfredapp.com/), but I switched to Raycast because it allows me to develop a more useful ChatGPT plugin with a beautiful user interface. In contrast, Alfred only allows you to copy or paste the AI output.
+
+The Raycast extension has several commands that comes with some prompts. 
+
+<Image
+  alt="Several commands available in the Raycast Extension."
+  caption="Several commands available in the Raycast Extension."
+  src={'/blog/gpt-on-mac/commands.png'}
+  width={1012}
+  height={516}
+/>
+
+Here are what they do:
+
+- Preview: use your selected text (e.g., "Write me an email about blah blah") as the input, then stream the output to the Raycast UI. 
+- Execute: Similar to preview, but directly pastes the result into your foreground application.
+- Summarize: summarize and explain the selected text for you. 
+- Refine: Refine the writing of the selected text.
+- Rewrite: Rewrite the the selected text using an academic tone.
+
+You can assign a dedicated keyboard shortcut to each of these commands. I personally use shortcuts like `alt + :`. For Summarize, Refine, and Rewrite, you may customize the prompt in the Extension settings. Here is the Summarize shortcut working in the wild:
+
+<Tweet tweetLink="chzenan/status/1631528428133584898" align="center" />
+
+The output from ChatGPT will stream to the Raycast UI, which allows you to copy the output to your clipboard using the keyboard shortcut `enter` or paste it directly into your foreground application using `cmd + enter`. If you are not happy with the output, you can regenerate the results with `cmd + R`. If the default `gpt-3.5-turbo` is not powerful enough for you, you may use `cmd + shift + R` to regenerate the result with `gpt-4`. You don't have to remember all these shortcuts, as Raycast also conveniently provide these options in the UI. Additionally, I have included some additional features, such as a token counter and a cost estimator.
+
+## Installation
+
+Of course, you should first install [Raycast](https://www.raycast.com/).
+
+To install this extension, you will need to download my extension from Github:
+
+```bash
+cd ~/Developer # or wherever you want to store the extension
+git clone https://github.com/alanzchen/chatgpt-quick-actions.git
+```
+
+Open Raycast and search for "Import Extension". Select the `chatgpt-quick-actions` folder and you should be good to go.
+
+<Warning>
+Raycast has their first-party AI integration currently in beta. It has more features but I like to keep everything under my control. For instance, it is unlikely that you will be able to use your own OpenAI API key with Raycast's AI integration.
+</Warning>
+
+## Customization
+
+For starters, you can customize the prompts and keyboard shortcuts in the settings.
+
+<Image
+  alt="Customize your prompts and keyboard shortcuts in the settings."
+  caption="Customize your prompts and keyboard shortcuts in the settings."
+  src={'/blog/gpt-on-mac/settings.png'}
+  width={1012}
+  height={516}
+/> 
+
+If you are comfortable with modifying the source code, you can also add more commands to your liking. For example, you can add more commands or change the default model. Depending on the desired behavior of the new command, duplicate the `execute.ts` or `rewrite.ts` files.
+
+The next step is to declare this new command in the `package.json` file. For example, if you want to add a new command called `New Command` (the corresponding file is `new_command.ts`), add the following entry to the `commands` array:
+
+```json
+{
+  "name": "new_command",
+  "title": "New Command",
+  "description": "An example new command",
+  "mode": "view"
+},
+```
+
+If this command comes with its own prompt, add an entry to the `preferences` array:
+
+```json
+{
+      "name": "prompt_new_command",
+      "title": "New Command Prompt",
+      "description": "The prompt for the new command",
+      "type": "textfield",
+      "default": "Summarize the following text as concise as possible: \n\n",
+      "required": false
+},
+```
+
+So that you could read this prompt in the `new_command.ts` file:
+
+```typescript
+const prompt = getPreferenceValues().prompt_new_command;
+```
+
+After you are done, run `npm run dev` to push the update locally to your Raycast.

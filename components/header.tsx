@@ -3,6 +3,7 @@ import Link from "next/link";
 import avatar from "public/avatar.png";
 import NavLink from "./NavLink";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { FullName } from "../pages/about";
 
 const links = [
   { label: "Home", href: "/" },
@@ -17,7 +18,7 @@ export default function Header() {
         <Link href="/" className="hidden shrink-0 sm:block">
           <Image
             src={avatar}
-            alt="Samuel Kraft avatar"
+            alt={`${FullName} avatar`}
             className="w-8 h-8"
             priority
           />

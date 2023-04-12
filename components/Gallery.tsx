@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import cn from "clsx";
 import localFont from "@next/font/local";
 
-import imageGotland from "public/gallery/gotland.jpg";
-import imageRun from "public/gallery/running.jpg";
-import imageSkate from "public/gallery/skate.jpg";
-import imageTrailrun from "public/gallery/trailrun.jpg";
+import imageMe from "public/gallery/me.jpg";
+import imageConf from "public/gallery/scecr.jpg";
+import imageSnowboarding from "public/gallery/snowboarding.jpg";
+import imageCam from "public/gallery/cam.jpg";
 import { ReactNode } from "react";
 import Activity, { ActivityType } from "./Activity";
 import Link from "./Link";
@@ -138,15 +138,15 @@ function Photo({
 export default function Gallery({
   lastActivity,
 }: {
-  lastActivity: ActivityType;
+  lastActivity?: ActivityType;
 }) {
   return (
     <>
       <section className="flex gap-4 h-[268px] relative">
         <Photo
-          src={imageGotland}
-          meta="2021-07-12"
-          alt="Samuel Kraft in Gotland"
+          src={imageMe}
+          meta="2022-10-02"
+          alt="Me, by Xianwen Cao"
           width={314}
           height={229}
           rotate={-6}
@@ -154,9 +154,9 @@ export default function Gallery({
           index={1}
         />
         <Photo
-          src={imageSkate}
-          meta="2017-07-04"
-          alt="Samuel skateboarding"
+          src={imageConf}
+          meta="2022-06-21"
+          alt="At SCECR 2022"
           width={180}
           height={240}
           rotate={6.3}
@@ -165,52 +165,26 @@ export default function Gallery({
           flipDirection="left"
         />
         <Photo
-          src={imageRun}
-          meta="2021-05-20"
-          alt="Samuel running in the sunset"
+          src={imageCam}
+          meta="2020-10-22"
+          alt={"Me with my camera and my long hair"}
+          width={230}
+          height={253}
+          rotate={7.6}
+          left={343}
+          index={3}
+          flipDirection="left"
+        />
+        <Photo
+          src={imageSnowboarding}
+          meta="2023-03-25"
+          alt="Me snowboarding at Buck Hill"
           width={270}
           height={225}
           rotate={-5.4}
-          left={343}
-          index={3}
+          left={570}
+          index={4}
         />
-        {lastActivity.photos ? (
-          <Photo
-            src={lastActivity.photos.primary.urls["600"]}
-            meta={
-              <span className="flex flex-col gap-3">
-                <span className="block">{lastActivity.name}</span>
-                <Link
-                  href={`https://www.strava.com/activities/${lastActivity.id}`}
-                >
-                  See on Strava ↗
-                </Link>
-              </span>
-            }
-            alt={lastActivity.name}
-            filename={`last-${lastActivity.sport_type}.jpg`}
-            width={190}
-            height={253}
-            rotate={7.6}
-            left={587}
-            index={4}
-            flipDirection="left"
-          >
-            <Activity activity={lastActivity} />
-          </Photo>
-        ) : (
-          <Photo
-            src={imageTrailrun}
-            meta="2022-09-10"
-            alt={"Trail Run view"}
-            width={190}
-            height={253}
-            rotate={7.6}
-            left={587}
-            index={4}
-            flipDirection="left"
-          />
-        )}
       </section>
     </>
   );

@@ -7,82 +7,58 @@ import Workplaces from "components/Workplaces";
 import Gallery from "components/Gallery";
 import { ActivityType } from "components/Activity";
 
-import bitrefillLogo from "public/projects/bitrefill-logo.png";
-import tracklibLogo from "public/projects/tracklib-logo.png";
-import styleroomLogo from "public/projects/styleroom-logo.png";
-import trailroutesLogo from "public/projects/trailroutes-logo.png";
-import notionLogo from "public/projects/notion-logo.png";
-import strengthLogo from "public/projects/strength-logo.png";
+import cuhkLogo from "public/schools/CUHK.png";
+import umnLogo from "public/schools/UMN.png";
+import githubLogo from "public/Github.png";
 import avatar from "public/avatar.png";
-
-import { getActivities, getActivity } from "lib/strava";
+import { GetStaticProps } from "next";
+import { Project, allProjects } from "../.contentlayer/generated";
+import { pick } from "contentlayer/client";
 
 export const connectLinks = [
-  { label: "Email", href: "mailto:samuelkraft@me.com" },
-  { label: "Twitter", href: "https://twitter.com/samuelkraft" },
-  { label: "GitHub", href: "https://github.com/samuelkraft" },
+  { label: "Email", href: "mailto:contact@zenan.ch" },
+  { label: "Twitter", href: "https://twitter.com/chzenan" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/chzenan/" },
+  { label: "GitHub", href: "https://github.com/alanzchen" },
 ];
+
+export const FullName = "Zenan Chen";
+export const SiteURL = "https://zenan.ch";
+
+type AboutProps = {
+  projects: Project[];
+};
 
 const workplaces = [
   {
-    title: "Design Engineer",
-    description: "Bitrefill",
-    time: "2021 - Now",
-    imageSrc: bitrefillLogo,
-    link: "https://bitrefill.com",
+    title: "Ph.D. in Information Systems",
+    description: "University of Minnesota",
+    time: "2018 - 2024",
+    imageSrc: umnLogo,
   },
   {
-    title: "Frontend Developer",
-    description: "Tracklib",
-    time: "2016 - 2021",
-    imageSrc: tracklibLogo,
-    link: "https://tracklib.com",
-  },
-  {
-    title: "Design Engineer",
-    description: "Styleroom",
-    time: "2013 - 2016",
-    imageSrc: styleroomLogo,
-    link: "https://styleroom.se/app",
+    title: "B.A. in Economics",
+    description: "CUHK, Shenzhen",
+    time: "2014 - 2018",
+    imageSrc: cuhkLogo,
   },
 ];
 
 const sideProjects = [
   {
-    title: "Trail Routes",
-    description: "Mapping platform built with react, mapbox, swiftUI",
-    imageSrc: trailroutesLogo,
-    link: "https://github.com/samuelkraft/routes",
-  },
-  {
-    title: "notion-blog-nextjs",
-    description: "Next.js starter repo with a blog powered by Notion",
-    imageSrc: notionLogo,
-    link: "https://github.com/samuelkraft/notion-blog-nextjs",
-  },
-  {
-    title: "Strength",
-    description: "iOS & WatchOS strength tracking app",
-    imageSrc: strengthLogo,
-    link: "https://samuelkraft.github.io/strength/",
-  },
-  {
-    title: "samuelkraft-next",
-    description: "The website you are looking at!",
-    imageSrc: avatar,
-    link: "https://github.com/samuelkraft/samuelkraft-next",
-  },
+    title: "Jupyter Desktop",
+    time: "2020",
+    description: "macOS App for Jupyter Lab",
+    imageSrc: githubLogo,
+    link: "https://github.com/alanzchen/jupyter-desktop",
+  }
 ];
 
-const seoTitle = "About | Samuel Kraft";
-const seoDesc =
-  "A designer/frontend developer hybrid that loves to build great products with delightful interfaces.";
+const seoTitle = `About | ${FullName}`;
+export const seoDesc =
+  "Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.";
 
-export default function About({
-  lastActivity,
-}: {
-  lastActivity: ActivityType;
-}) {
+export default function About({ projects }: AboutProps) {
   return (
     <>
       <NextSeo
@@ -91,8 +67,8 @@ export default function About({
         openGraph={{
           title: seoTitle,
           description: seoDesc,
-          url: `https://samuelkraft.com/about/`,
-          site_name: "Samuel Kraft",
+          url: `/about/`,
+          site_name: `${FullName}`,
         }}
         twitter={{
           cardType: "summary_large_image",
@@ -100,14 +76,14 @@ export default function About({
       />
       <div className="flex flex-col gap-16 md:gap-24">
         <div className="hidden sm:block">
-          <Gallery lastActivity={lastActivity} />
+          <Gallery />
         </div>
         <div className="-mb-8 sm:hidden animate-in">
           <Image
             src={avatar}
             width={48}
             height={48}
-            alt="avatar of Samuel Kraft"
+            alt={`avatar of ${FullName}`}
           />
         </div>
         <div
@@ -117,33 +93,37 @@ export default function About({
           <Section heading="About me" headingAlignment="right">
             <div className="flex flex-col gap-6">
               <p>
-                <em className="font-semibold">Hi there!</em>&nbsp; I’m Samuel, a
-                designer/frontend developer hybrid that loves to build great
-                products with delightful interfaces.
-              </p>
-              <p>
-                Currently working at{" "}
-                <Link href="https://bitrefill.com">Bitrefill</Link>, making
-                living on crypto possible. Before that I worked at music startup{" "}
-                <Link href="https://tracklib.com">Tracklib</Link>, the record
-                store for sampling.
-              </p>
-              <p>
-                I love working in the realm between design and code. Some things
-                that makes me excited are CSS, Design Systems, Animation,
-                crafting excellent component apis and making interfaces feel fun
-                and human.
-              </p>
-              <p>
-                I grew up in Nacka just outside of Stockholm, Sweden and come
-                from a background of studying Photography.
-              </p>
-              <p>
-                Outside of work I’m obsessed with endurance sports and
-                travelling with my family.
+                <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan.
+                I am a Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.
               </p>
             </div>
           </Section>
+          <Section heading="Education" headingAlignment="right">
+            <div className="flex flex-col w-full gap-8">
+              <p>
+                My advisor is <Link href="https://carlsonschool.umn.edu/faculty/jason-chan">Jason Chan</Link> and my co-advisor is {" "}
+                <Link href={`https://carlsonschool.umn.edu/faculty/soumya-sen`}>Soumya Sen</Link> 
+              </p>
+              <Workplaces items={workplaces} />
+            </div>
+          </Section>
+          {/* <Section heading="Research" headingAlignment="right">
+              <ul className="flex flex-col gap-16">
+                {projects.map((project) => (
+                  <li key={project.title}>
+                      <div className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-1">
+                          <h3>{project.title}</h3>
+                          <p className="text-secondary">{project.description}</p>
+                          <Link href={`/project/${project.slug}`} underline>
+                            Read More
+                          </Link>
+                        </div>
+                      </div>
+                  </li>
+                ))}
+              </ul>
+          </Section> */}
           <Section heading="Connect" headingAlignment="right">
             <ul className="flex gap-6 animated-list">
               {connectLinks.map((link) => (
@@ -153,19 +133,10 @@ export default function About({
               ))}
             </ul>
           </Section>
-          <Section heading="Work" headingAlignment="right">
-            <div className="flex flex-col w-full gap-8">
-              <p>
-                {new Date().getFullYear() - 2013}+ years of experience working
-                in both design & engineering.
-              </p>
-              <Workplaces items={workplaces} />
-            </div>
-          </Section>
           <Section heading="Side projects" headingAlignment="right">
             <div className="flex flex-col w-full gap-8">
-              <p>I enjoy hacking on the side.</p>
-              <Workplaces items={sideProjects} />
+              <p>I am also a self-taught full-stack developer. I build stuff for fun :) </p>
+              <Workplaces items={sideProjects} isAnimated />
             </div>
           </Section>
         </div>
@@ -174,20 +145,15 @@ export default function About({
   );
 }
 
-export const getStaticProps = async () => {
-  const activities: ActivityType[] = await getActivities();
-  const lastNonVirtualActivityWithPhoto = activities
-    .filter((activity) =>
-      ["Run", "TrailRun", "Bike", "Swim", "Hike"].includes(activity.sport_type)
-    )
-    .find((activity) => activity.total_photo_count > 0);
-  const activity = await getActivity(
-    lastNonVirtualActivityWithPhoto?.id as number
+export const getStaticProps: GetStaticProps = async () => {
+
+  const projects = allProjects
+    .sort((a, b) => parseInt(b.time.slice(0, 4)) - parseInt(a.time.slice(0, 4)))
+    .map((post) =>
+    pick(post, ["slug", "title", "description", "time"])
   );
+
   return {
-    props: {
-      lastActivity: activity,
-    },
-    revalidate: 3600,
+    props: { projects },
   };
 };

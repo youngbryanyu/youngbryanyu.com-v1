@@ -5,7 +5,6 @@ import CustomImage from "components/blog/image";
 import Video from "components/blog/video";
 import Link from "components/Link";
 import Warning from "components/warning";
-import { NowPlayingIcon } from "components/blog/nowplaying";
 import SegmentedControl from "components/blog/segmentedcontrol";
 import Parallax from "components/blog/parallax";
 
@@ -40,7 +39,6 @@ const MDXComponents = {
   Messages: Messages,
   AnimatedMessages: AnimatedMessages,
   TailBreakdown: TailBreakdown,
-  NowPlayingIcon: NowPlayingIcon,
   SegmentedControl: SegmentedControl,
   Parallax: Parallax,
 };

@@ -1,9 +1,9 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { allProjects, Project as ProjectType } from ".contentlayer/generated";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { NextSeo } from "next-seo";
+import { NextSeo, SiteLinksSearchBoxJsonLd } from "next-seo";
 import MDXComponents from "components/MDXComponents";
-import { connectLinks } from "pages/about";
+import { connectLinks, FullName, SiteURL } from "pages/about";
 import Link from "components/Link";
 import { ReactElement } from "react";
 import HitCounter from "components/hitcounter";
@@ -14,9 +14,9 @@ type ProjectProps = {
 };
 
 export default function Project({ project, rest }: ProjectProps) {
-  const seoTitle = `${project.title} Case Study | Samuel Kraft`;
+  const seoTitle = `${project.title} | ${FullName}`;
   const seoDesc = `${project.description}`;
-  const url = `https://samuelkraft.com/project/${project.slug}`;
+  const url = `${SiteURL}/project/${project.slug}`;
   const Component = useMDXComponent(project.body.code);
 
   return (
@@ -32,14 +32,7 @@ export default function Project({ project, rest }: ProjectProps) {
           title: seoTitle,
           url,
           description: seoDesc,
-          images: [
-            {
-              url: `https://og-image.samuelkraft.vercel.app/${encodeURIComponent(
-                project.title
-              )}?desc=${encodeURIComponent("Case study")}&theme=dark.png`,
-              alt: project.title,
-            },
-          ],
+          images: [],
         }}
       />
 
@@ -53,11 +46,10 @@ export default function Project({ project, rest }: ProjectProps) {
               {project.url && (
                 <>
                   <span>&middot;</span>
-                  <Link href={project.url}>Visit Live ↗</Link>
+                  <Link href={project.url}>Read Paper ↗</Link>
                 </>
               )}
             </div>
-            {project.description}
           </div>
 
           <div className="h-12" />
@@ -67,9 +59,9 @@ export default function Project({ project, rest }: ProjectProps) {
         </article>
         <hr className="border-primary px-4 md:px-6 py-2 max-w-[700px] mx-auto w-full" />
         <div className="flex flex-col gap-3.5 px-4 md:px-6 py-2 max-w-[700px] mx-auto w-full">
-          <h3 className="text-xl">Want a deeper dive?</h3>
+          <h3 className="text-xl">Have any questions?</h3>
           <p className="text-secondary">
-            Get in touch to schedule a presentation
+            Get in touch with me via{" "}
           </p>
           <ul className="flex gap-5 animated-list">
             {connectLinks.map((link) => (
