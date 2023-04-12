@@ -23,7 +23,9 @@ export default function Home({ posts, projects }: HomeProps) {
             className="text-secondary animate-in"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            Ph.D. candidate in Information Systems. <br></br> I study Technologies ✕ Productivity.
+            Ph.D. candidate in Information Systems. <br></br>
+            I study Technologies ✕ Productivity. <br></br><br></br>
+            <Link href="https://zenan.ch/cv.pdf" >CV</Link>
           </p>
         </div>
         <div

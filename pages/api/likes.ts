@@ -1,11 +1,22 @@
 import faunadb from "faunadb";
-import { getMentionsForSlug } from "lib/webmentions";
 import { NextApiRequest, NextApiResponse } from "next";
+import { SiteURL } from "../about";
 
 type Data = {
   message?: string;
   likes?: number;
 };
+
+const getMentionsForSlug = async (slug: string) => {
+  const webmentions = await fetch(
+    `https://webmention.io/api/mentions?target=${SiteURL}/blog/${slug}&per-page=10000`
+  );
+  const mentions = await webmentions.json();
+  const numberOfmentions = mentions?.links?.length;
+
+  return numberOfmentions > 0 ? numberOfmentions : 0;
+};
+
 
 module.exports = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const q = faunadb.query;

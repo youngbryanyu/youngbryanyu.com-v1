@@ -19,8 +19,7 @@ export const connectLinks = [
   { label: "Email", href: "mailto:contact@zenan.ch" },
   { label: "Twitter", href: "https://twitter.com/chzenan" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/chzenan/" },
-  { label: "GitHub", href: "https://github.com/alanzchen" },
-  { label: "Download CV", href: "/cv.pdf"}
+  { label: "GitHub", href: "https://github.com/alanzchen" }
 ];
 
 export const FullName = "Zenan Chen";

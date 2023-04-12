@@ -43,7 +43,16 @@ export default function Post({ post, related }: PostProps) {
             publishedTime: post.publishedAt,
             modifiedTime: post.updatedAt,
             authors: [SiteURL],
-          }
+          },
+          images: post.image ? 
+          [{
+            url: post.image
+              ? `https://${SiteURL}${post.image}`
+              : `https://og-image.samuelkraft.vercel.app/${encodeURIComponent(
+                  post.title
+                )}?desc=${encodeURIComponent(seoDesc)}&theme=dark.png`,
+            alt: post.title,
+          }]: []
         }}
       />
 
@@ -76,7 +85,7 @@ export default function Post({ post, related }: PostProps) {
           </div>
         </article>
 
-        {/* <LikeButton slug={post.slug} /> */}
+        <LikeButton slug={post.slug} />
 
         <Tags tags={post.tags} />
 
