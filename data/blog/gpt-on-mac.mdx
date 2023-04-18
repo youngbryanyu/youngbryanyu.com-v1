@@ -64,9 +64,11 @@ To install this extension, you will need to download my extension from Github:
 ```bash
 cd ~/Developer # or wherever you want to store the extension
 git clone https://github.com/alanzchen/chatgpt-quick-actions.git
+npm install
+npm run dev
 ```
 
-Open Raycast and search for "Import Extension". Select the `chatgpt-quick-actions` folder and you should be good to go.
+This set of commands should install the extension to Raycast. You can now invoke the extension by typing `gpt` in the Raycast search bar. After the installation, you may close the terminal window.
 
 <Warning>
 Raycast has their first-party AI integration currently in beta. It has more features but I like to keep everything under my control. For instance, it is unlikely that you will be able to use your own OpenAI API key with Raycast's AI integration.
@@ -101,12 +103,12 @@ If this command comes with its own prompt, add an entry to the `preferences` arr
 
 ```json
 {
-      "name": "prompt_new_command",
-      "title": "New Command Prompt",
-      "description": "The prompt for the new command",
-      "type": "textfield",
-      "default": "Summarize the following text as concise as possible: \n\n",
-      "required": false
+  "name": "prompt_new_command",
+  "title": "New Command Prompt",
+  "description": "The prompt for the new command",
+  "type": "textfield",
+  "default": "Summarize the following text as concise as possible: \n\n",
+  "required": false
 },
 ```
 
