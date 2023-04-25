@@ -59,7 +59,12 @@ The output from ChatGPT will stream to the Raycast UI, which allows you to copy 
 
 Of course, you should first install [Raycast](https://www.raycast.com/).
 
-To install this extension, you will need to download my extension from Github:
+1. Download the extension from [here](https://github.com/alanzchen/chatgpt-quick-actions/releases), look for the `.zip` file under "Assets".
+2. Unzip the file and move the `chatgpt-quick-actions` folder to a permanent location. 
+3. In Raycast, search for "Import Extension" and select the folder you just unzipped.
+4. Done! You can now invoke the extension by typing `gpt` in the Raycast search bar. 
+
+Alternatively, you may install from source:
 
 ```bash
 cd ~/Developer # or wherever you want to store the extension
@@ -68,7 +73,7 @@ npm install
 npm run dev
 ```
 
-This set of commands should install the extension to Raycast. You can now invoke the extension by typing `gpt` in the Raycast search bar. After the installation, you may close the terminal window.
+This set of commands should install the extension to Raycast. It's safe to kill the `npm run dev` process and close the terminal window.
 
 <Warning>
 Raycast has their first-party AI integration currently in beta. It has more features but I like to keep everything under my control. For instance, it is unlikely that you will be able to use your own OpenAI API key with Raycast's AI integration.
