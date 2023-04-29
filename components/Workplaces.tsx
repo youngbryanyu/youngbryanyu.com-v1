@@ -34,12 +34,12 @@ function Workplace({ title, description, imageSrc, time, link }: Workplace) {
       {link ? (
         <Link
           href={link}
-          className="flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
+          className="flex justify-between w-full no-underline"
         >
           {content}
         </Link>
       ) : (
-        <div className="flex justify-between ">{content}</div>
+        <div className="flex justify-between w-full">{content}</div>
       )}
     </li>
   );

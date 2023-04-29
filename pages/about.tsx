@@ -101,6 +101,30 @@ const ventures = [
   }
 ];
 
+const awards = [
+  {
+    title: "General Track Best Paper Award @ ICIS",
+    time: "2022",
+  },
+  {
+    title: "Best Student Paper Award @ WITS",
+    time: "2022",
+  },
+  {
+    title: "Carlson School of Management Dissertation Fellowship",
+    time: "2022",
+  },
+  {
+    title: "First Place @ China Bridge Case Competition ($6,000)",
+    description: "As Faculty Mentor, I coached a team of 4 undergraduate students.",
+    time: "2021",
+  },
+  {
+    title: "Dean’s Small Research Grant",
+    time: "2020",
+  },
+];
+
 const seoTitle = `About | ${FullName}`;
 export const seoDesc =
   "Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.";
@@ -161,6 +185,23 @@ export default function About({ projects }: AboutProps) {
                 <Link href={`https://carlsonschool.umn.edu/faculty/soumya-sen`}>Soumya Sen</Link> 
               </p>
               <Workplaces items={workplaces} />
+            </div>
+          </Section>
+          <Section heading="Selected Awards" headingAlignment="right">
+            <div className="flex flex-col w-full gap-8">
+              <ul className={`flex flex-col gap-1`}>
+                {awards.map((award) => (
+                  <li className="" key="award">
+                    <div className="flex justify-between gap-2">
+                      <div className="flex flex-col gap-px">
+                        <p>{award.title}</p>
+                        {award.description && <p className="text-sm text-secondary">{award.description}</p>}
+                      </div>
+                      <p className="text-secondary">{award.time}</p>
+                    </div>
+                </li>
+                ))}
+              </ul>
             </div>
           </Section>
           <Section heading="Side Projects" headingAlignment="right">
