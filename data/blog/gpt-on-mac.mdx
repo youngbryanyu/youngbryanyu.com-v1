@@ -57,23 +57,9 @@ The output from ChatGPT will stream to the Raycast UI, which allows you to copy 
 
 ## Installation
 
-Of course, you should first install [Raycast](https://www.raycast.com/).
-
-1. Download the extension from [here](https://github.com/alanzchen/chatgpt-quick-actions/releases), look for the `.zip` file under "Assets".
-2. Unzip the file and move the `chatgpt-quick-actions` folder to a permanent location. 
-3. In Raycast, search for "Import Extension" and select the folder you just unzipped.
-4. Done! You can now invoke the extension by typing `gpt` in the Raycast search bar. 
-
-Alternatively, you may install from source:
-
-```bash
-cd ~/Developer # or wherever you want to store the extension
-git clone https://github.com/alanzchen/chatgpt-quick-actions.git
-npm install
-npm run dev
-```
-
-This set of commands should install the extension to Raycast. It's safe to kill the `npm run dev` process and close the terminal window.
+1. Install [Raycast](https://www.raycast.com/).
+2. Search for `ChatGPT Quick Actions` using the "Store" command in Raycast. Or, you may visit [this page](https://www.raycast.com/alanzchen/chatgpt-quick-actions).
+3. Follow the wizard to finish the setup. You will need to provide your OpenAI API key.
 
 <Warning>
 Raycast has their first-party AI integration currently in beta. It has more features but I like to keep everything under my control. For instance, it is unlikely that you will be able to use your own OpenAI API key with Raycast's AI integration.
@@ -89,11 +75,20 @@ For starters, you can customize the prompts and keyboard shortcuts in the settin
   src={'/blog/gpt-on-mac/settings.png'}
   width={1012}
   height={516}
-/> 
+/>
 
-If you are comfortable with modifying the source code, you can also add more commands to your liking. For example, you can add more commands or change the default model. Depending on the desired behavior of the new command, duplicate the `execute.ts` or `rewrite.ts` files.
+If you are comfortable with modifying the source code, you can also add more commands to your liking. For example, you can add more commands or change the default model. First, you will need to install the extension from source:
 
-The next step is to declare this new command in the `package.json` file. For example, if you want to add a new command called `New Command` (the corresponding file is `new_command.ts`), add the following entry to the `commands` array:
+```bash
+cd ~/Developer # or wherever you want to store the extension
+git clone https://github.com/alanzchen/chatgpt-quick-actions.git
+npm install
+npm run dev
+```
+
+This set of commands should install the extension to Raycast. It's safe to kill the `npm run dev` process and close the terminal window.
+
+Depending on the desired behavior of the new command, duplicate the `execute.ts` or `rewrite.ts` files. Declare your new command in the `package.json` file. For example, if you want to add a new command called `New Command` (the corresponding file is `new_command.ts`), add the following entry to the `commands` array:
 
 ```json
 {
@@ -117,7 +112,7 @@ If this command comes with its own prompt, add an entry to the `preferences` arr
 },
 ```
 
-So that you could read this prompt in the `new_command.ts` file:
+You could then read this prompt from the preferences in the `new_command.ts` file:
 
 ```typescript
 const prompt = getPreferenceValues().prompt_new_command;
