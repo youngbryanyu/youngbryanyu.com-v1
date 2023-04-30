@@ -23,9 +23,7 @@ export default function ThemeSwitcher() {
 
     const timer = setTimeout(() => {
       const isArc =
-        document.documentElement.style.getPropertyValue(
-          "--arc-palette-foregroundPrimary"
-        ) !== "";
+        getComputedStyle(document.documentElement).getPropertyValue('--arc-palette-background') !== "";
       if (isArc) setIsArcBrowser(true);
     }, 800);
     return () => clearTimeout(timer);
