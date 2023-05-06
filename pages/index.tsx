@@ -7,6 +7,9 @@ import Section from "components/Section";
 import PostList from "components/postlist";
 
 import { FullName } from "./about";
+import { talks, TalkList } from "./talks";
+
+const futureTalks = talks.filter((talk) => new Date(talk.date) > new Date());
 
 type HomeProps = {
   posts: Post[];
@@ -28,6 +31,7 @@ export default function Home({ posts, projects }: HomeProps) {
             <Link href="https://zenan.ch/cv.pdf" >CV</Link>
           </p>
         </div>
+        {futureTalks.length > 0 && TalkList(futureTalks, "Upcoming talks")}
         <div
           className="flex flex-col gap-4 animate-in"
           style={{ "--index": 2 } as React.CSSProperties}
