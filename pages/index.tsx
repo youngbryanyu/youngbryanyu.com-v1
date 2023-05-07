@@ -31,7 +31,17 @@ export default function Home({ posts, projects }: HomeProps) {
             <Link href="https://zenan.ch/cv.pdf" >CV</Link>
           </p>
         </div>
-        {futureTalks.length > 0 && TalkList(futureTalks, "Upcoming talks")}
+        {futureTalks.length > 0 && (
+        <div
+          className="flex flex-col gap-4 animate-in"
+          style={{ "--index": 2 } as React.CSSProperties}
+        >
+          <h2>Upcoming Talks</h2>
+          <ul className="flex flex-col gap-16">
+            {TalkList(futureTalks)}
+          </ul>
+        </div>
+        )}
         <div
           className="flex flex-col gap-4 animate-in"
           style={{ "--index": 2 } as React.CSSProperties}

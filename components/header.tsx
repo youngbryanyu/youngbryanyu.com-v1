@@ -24,7 +24,7 @@ export default function Header() {
             priority
           />
         </Link>
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center gap-1">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href}>{link.label}</NavLink>

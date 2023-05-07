@@ -11,7 +11,7 @@ const config = {
     site_name: FullName,
     images: [
       {
-        url: `${SiteURL}/og.jpg`,
+        url: `${SiteURL}/og.png`,
         alt: FullName,
       },
     ],
