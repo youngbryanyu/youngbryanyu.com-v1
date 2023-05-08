@@ -179,7 +179,7 @@ export default function Talks() {
           cardType: "summary_large_image",
         }}
       />
-      <div className="flex flex-col gap-10 md:gap-10 ">
+      <div className="flex flex-col gap-10 md:gap-10">
         <div className="">
           <h1>Talks</h1>
           <p
@@ -217,7 +217,7 @@ export default function Talks() {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <Listbox.Options className="absolute w-full p-2 overflow-auto text-base origin-top-right shadow-lg max-h-60 w-42 rounded-xl bg-blur backdrop-blur-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options className="absolute w-full p-2 overflow-auto text-base origin-top-right shadow-lg max-h-60 w-42 rounded-xl bg-blur backdrop-blur-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm scroll-smooth no-scrollbar">
                   {conferences.map(conference => (
                     <Listbox.Option
                       key={conference}
