@@ -6,9 +6,10 @@ import PostList from "components/postlist";
 import Input from "components/input";
 import { useState } from "react";
 import { IconSearch } from "components/Icons";
-import { FullName, seoDesc, SiteURL } from "../about";
+import { FullName, SiteURL } from "../about";
 
 const seoTitle = `Blog | ${FullName}`;
+const seoDesc = "My writings on my research, technical stuff, life, and more.";
 
 type BlogProps = {
   posts: Post[];

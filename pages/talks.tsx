@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/24/outline';
 import { NextSeo } from "next-seo";
-import { FullName, seoDesc, SiteURL  } from "./about";
+import { FullName, SiteURL } from "./about";
 
 const seoTitle = `Talks | ${FullName}`;
+const seoDesc = `Invited talks and presentations.`;
 
 export const talks = [
   // {
@@ -198,7 +199,7 @@ export default function Talks() {
             onChange={setSelectedConference}
           >
             <div className="relative">
-              <Listbox.Button className="p-2 mt-2 w-full overflow-auto max-h-60 w-42 rounded-xl backdrop-blur-lg ring-1 ring-gray-400 ring-opacity-20 text-sm focus:outline-none hover:bg-secondaryA transition-all">
+              <Listbox.Button className="p-2 w-full overflow-auto max-h-60 w-42 rounded-xl backdrop-blur-lg ring-1 ring-gray-400 ring-opacity-20 text-sm focus:outline-none hover:bg-secondaryA transition-all">
                 <span className="block truncate">
                   {selectedConference}
                 </span>
@@ -217,7 +218,7 @@ export default function Talks() {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <Listbox.Options className="absolute w-full p-2 overflow-auto text-base origin-top-right shadow-lg max-h-60 w-42 rounded-xl bg-blur backdrop-blur-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm scroll-smooth no-scrollbar">
+                <Listbox.Options className="absolute mt-2 w-full p-2 overflow-auto text-base origin-top-right shadow-lg max-h-60 w-42 rounded-xl bg-blur backdrop-blur-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm scroll-smooth no-scrollbar">
                   {conferences.map(conference => (
                     <Listbox.Option
                       key={conference}
