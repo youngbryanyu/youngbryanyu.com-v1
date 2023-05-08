@@ -128,7 +128,7 @@ export function TalkList(talks: Talk[]) {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map((talk) => (
       <li key={talk.title + talk.conference + talk.date}>
-        <Section heading={new Intl.DateTimeFormat('en-US', { year: "numeric", month: "short" }).format(new Date(talk.date))}>
+        <Section heading={new Intl.DateTimeFormat('en-US', { year: "numeric", month: "short", day: "numeric" }).format(new Date(talk.date))}>
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1">
               <h3>
