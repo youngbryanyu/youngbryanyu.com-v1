@@ -42,16 +42,16 @@ export default function Blog({ posts }: BlogProps) {
       <div className="flex flex-col gap-20">
         <div className="flex flex-col gap-3.5">
           <div className="flex flex-col gap-2">
-            <h1 className="animate-in">Blog</h1>
+            <h1 className="">Blog</h1>
             <p
-              className="text-secondary animate-in"
+              className="text-secondary"
               style={{ "--index": 1 } as React.CSSProperties}
             >
               I write about my research, technical stuff, my life, and more.
             </p>
           </div>
           <div
-            className="animate-in"
+            className=""
             style={{ "--index": 2 } as React.CSSProperties}
           >
             <Input

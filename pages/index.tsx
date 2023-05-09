@@ -21,9 +21,9 @@ export default function Home({ posts, projects }: HomeProps) {
     <>
       <div className="flex flex-col gap-20 md:gap-28">
         <div>
-          <h1 className="animate-in">{`Zenan "Alan" Chen`}</h1>
+          <h1 className="">{`Zenan "Alan" Chen`}</h1>
           <p
-            className="text-secondary animate-in"
+            className="text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
             Ph.D. candidate in Information Systems. <br></br>
@@ -49,7 +49,7 @@ export default function Home({ posts, projects }: HomeProps) {
           <h2>Selected research projects</h2>
           <ul className="flex flex-col gap-16">
             {projects.map((project) => (
-              <li key={project.title}>
+              <li key={project.title} className="animate-in">
                 <Section heading={project.time}>
                   <div className="flex flex-col gap-5">
                     <div className="flex flex-col gap-1">

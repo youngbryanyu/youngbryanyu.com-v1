@@ -172,6 +172,7 @@ input:-webkit-autofill:focus {
 
 .animate-in {
   animation-delay: calc(var(--index) * 130ms);
+  animation-fill-mode: both;
 }
 
 /*
