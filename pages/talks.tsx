@@ -72,6 +72,7 @@ export const talks = [
     conference: "Platform Strategy Symposium",
     title: "Investigating the Coordination of Functionality Richness, First-party Content Quality, and Revenue-sharing on Digital Platforms",
     location: "Boston, Massachusetts",
+    link: "https://www.youtube.com/watch?v=iQK2ZKabHdI",
     date: "July 19, 2022"
   },
   {
