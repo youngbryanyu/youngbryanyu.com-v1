@@ -5,6 +5,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/24/outline';
 import { NextSeo } from "next-seo";
 import { FullName, SiteURL } from "./about";
+import { formatDate } from "../lib/formatdate";
 
 const seoTitle = `Talks | ${FullName}`;
 const seoDesc = `Invited talks and presentations.`;
@@ -130,7 +131,7 @@ export function TalkList(talks: Talk[]) {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map((talk) => (
       <li key={talk.title + talk.conference + talk.date}>
-        <Section heading={new Intl.DateTimeFormat('en-US', { year: "numeric", month: "short", day: "numeric" }).format(new Date(talk.date))}>
+        <Section heading={formatDate(talk.date)}>
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1">
               <h3>
