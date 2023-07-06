@@ -1,6 +1,6 @@
-const dynamic = require("next/dynamic");
 const fs = require("fs");
-const globby = dynamic(() => import("globby"));
+const { sync } = require("globby");
+const SiteURL = "https://zenan.ch";
 
 function addPage(page) {
   const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");
@@ -12,9 +12,9 @@ function addPage(page) {
   </url>`;
 }
 
-async function generateSitemap() {
+function generateSitemap() {
   // Ignore Next.js specific files (e.g., _app.js) and API routes.
-  const pages = await globby([
+  const pages = sync([
     "pages/**/*{.js,.mdx,.tsx}",
     "!pages/_*.tsx",
     "!pages/api",
