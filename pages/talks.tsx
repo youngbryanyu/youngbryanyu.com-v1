@@ -11,12 +11,12 @@ const seoTitle = `Talks | ${FullName}`;
 const seoDesc = `Invited talks and presentations.`;
 
 export const talks = [
-  // {
-  //   conference: "INFORMS Annual Meeting",
-  //   title: "Generative AI",
-  //   location: "Phoenix, Arizona",
-  //   date: "October 2023"
-  // },
+  {
+    conference: "INFORMS Annual Meeting",
+    title: "Large Language Model In Creative Work",
+    location: "Phoenix, Arizona",
+    date: "October 15, 2023"
+  },
   {
     conference: "International Conference on Information Systems (ICIS)",
     title: "Less is Not Always More: Investigating the Impact of Block Intensity and Immediacy of Social Media Blockers on Productivity",
