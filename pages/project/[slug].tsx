@@ -104,5 +104,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 Project.getLayout = function getLayout(page: ReactElement) {
-  return page;
+  return (
+    <main className="px-4 md:px-6 pb-24 md:pb-44 max-w-[700px] mx-auto ring-offset-primary">
+      {page}
+    </main>
+  )
 };
