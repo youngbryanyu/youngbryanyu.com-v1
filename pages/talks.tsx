@@ -12,6 +12,12 @@ const seoDesc = `Invited talks and presentations.`;
 
 export const talks = [
   {
+    conference: "Conference in Information Systems and Technology (CIST)",
+    title: "Large Language Model In Creative Work",
+    location: "Phoenix, Arizona",
+    date: "October 14, 2023"
+  },
+  {
     conference: "INFORMS Annual Meeting",
     title: "Large Language Model In Creative Work",
     location: "Phoenix, Arizona",
