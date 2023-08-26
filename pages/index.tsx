@@ -26,24 +26,28 @@ export default function Home({ posts, projects }: HomeProps) {
             className="text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            Ph.D. candidate in Information Systems. <br></br>
-            I study Technologies ✕ Productivity. <br></br><br></br>
-            <Link href="https://zenan.ch/cv.pdf" >CV</Link>
+            IS Ph.D. Candidate, UMN Carlson<br></br>
+            For a more humane & productive future<br></br>
+            <br></br>
+            <Link href="https://zenan.ch/cv.pdf" >CV</Link> (on job market 23-24)
           </p>
         </div>
         {futureTalks.length > 0 && (
         <div
-          className="flex flex-col gap-4 animate-in"
+          className="flex flex-col gap-8 animate-in"
           style={{ "--index": 2 } as React.CSSProperties}
         >
           <h2>Upcoming Talks</h2>
           <ul className="flex flex-col gap-16">
             {TalkList(futureTalks)}
           </ul>
+          <Link href="/talks" className="items-start underline">
+            See all talks
+          </Link>
         </div>
         )}
         <div
-          className="flex flex-col gap-4 animate-in"
+          className="flex flex-col gap-8 animate-in"
           style={{ "--index": 2 } as React.CSSProperties}
         >
           <h2>Selected research projects</h2>

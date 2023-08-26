@@ -127,7 +127,7 @@ const awards = [
 
 const seoTitle = `About | ${FullName}`;
 export const seoDesc =
-  "Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.";
+  "Ph.D. candidate in Information Systems for a more humane & productive future";
 
 export default function About({ projects }: AboutProps) {
   return (
@@ -165,7 +165,10 @@ export default function About({ projects }: AboutProps) {
             <div className="flex flex-col gap-6">
               <p>
                 <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan.
-                I am a Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.
+                I am a Researcher in Information Systems.
+              </p>
+              <p>
+                Technologies are not always optimally designed for or used by humans. My vision is to building a more humane and productive future via experiments assessing the impacts of technologies.
               </p>
             </div>
           </Section>

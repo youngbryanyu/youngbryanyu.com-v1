@@ -148,13 +148,8 @@ export function TalkList(talks: Talk[]) {
             <div className="flex flex-col gap-1">
               <h3>
                 {talk.title}
-                {talk.award &&
-                  <span className="inline-block px-1.5 py-[1px] relative -top-[2px] font-bold ml-2 text-[10px] uppercase rounded-full brand-gradient text-white">
-                    Award
-                  </span>
-                }
               </h3>
-              {talk.award && <p className="text-secondary"><i>{talk.award}</i></p>}
+              {talk.award && <p className="text-secondary">🏵️ <i>{talk.award}</i> 🏵️</p>}
               <p className="text-secondary">{talk.conference}</p>
               <p className="text-secondary">{talk.location}</p>
               {talk.link && <Link href={`${talk.link}`} underline>
