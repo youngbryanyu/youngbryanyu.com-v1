@@ -1,9 +1,9 @@
 import { DefaultSeo } from "next-seo";
-import { FullName, SiteURL } from "../pages/about";
+import { FullName, SiteURL, seoDesc } from "../pages/about";
 
 const config = {
   title: `${FullName}`,
-  description: "Researcher in Information Systems with a primary focus on Technologies ✕ Productivity.",
+  description: `${seoDesc}`,
   openGraph: {
     type: "website",
     locale: "en_US",
