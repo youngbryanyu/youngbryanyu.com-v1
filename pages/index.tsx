@@ -29,7 +29,7 @@ export default function Home({ posts, projects }: HomeProps) {
             IS Ph.D. Candidate, UMN Carlson<br></br>
             For a more humane & productive future<br></br>
             <br></br>
-            <Link href="https://zenan.ch/cv.pdf" >CV</Link> (on job market 23-24)
+            <Link href="https://go.zenan.ch/cv" >CV</Link> (on job market 23-24)
           </p>
         </div>
         {futureTalks.length > 0 && (
