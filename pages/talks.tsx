@@ -12,6 +12,12 @@ const seoDesc = `Invited talks and presentations.`;
 
 export const talks = [
   {
+    conference: "Workshop on Information Systems and Economics (WISE)",
+    title: "Large Language Model In Creative Work",
+    location: "Hyderabad, India",
+    date: "December 13, 2023"
+  },
+  {
     conference: "Conference in Information Systems and Technology (CIST)",
     title: "Large Language Model In Creative Work",
     location: "Phoenix, Arizona",
