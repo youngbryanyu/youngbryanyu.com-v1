@@ -17,12 +17,16 @@ import stayLogo from "public/ventures/stay.jpeg";
 import openaiLogo from "public/projects/openai-logo.png";
 import nosediveLogo from "public/projects/nosedive.png";
 import canvasLogo from "public/projects/canvas.png";
+import isjobsLogo from "public/ventures/davis001.jpg";
+import surgeLogo from "public/ventures/surge.svg";
+import misqLogo from "public/ventures/misq.png";
 
 import avatar from "public/avatar.png";
 
 import { GetStaticProps } from "next";
 import { Project, allProjects } from "../.contentlayer/generated";
 import { pick } from "lib/pick";
+import MDXComponents from "../components/MDXComponents";
 
 export const connectLinks = [
   { label: "Email", href: "mailto:contact@zenan.ch" },
@@ -85,6 +89,27 @@ const sideProjects = [
 ];
 
 const ventures = [
+  {
+    title: "IS Jobs",
+    time: "2022 -",
+    description: "Crowdsourced database for IS job posts",
+    imageSrc: isjobsLogo,
+    link: "https://isjobs.xyz",
+  },
+  {
+    title: "MISQ Insider (as founding coordinator)",
+    time: "2021 -",
+    description: "MISQ-affiliated student blog for interviews",
+    imageSrc: misqLogo,
+    link: "https://isjobs.xyz",
+  },
+  {
+    title: "Surge.fm",
+    time: "2020 -",
+    description: "Crowdsourced self-organizing news aggregator",
+    imageSrc: surgeLogo,
+    link: "https://surge.fm",
+  },
   {
     title: "浅见 (Qianjian)",
     time: "2014 - 2018",
@@ -165,10 +190,13 @@ export default function About({ projects }: AboutProps) {
             <div className="flex flex-col gap-6">
               <p>
                 <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan.
-                I am a Researcher in Information Systems.
               </p>
+            </div>
+          </Section>
+          <Section heading="Research" headingAlignment="right">
+            <div className="flex flex-col gap-6">
               <p>
-                Technologies are not always optimally designed for or used by humans. My vision is to building a more humane and productive future via experiments assessing the impacts of technologies.
+                Driven by a profound interest in the interplay between technology and society, my research vision is centered on understanding and guiding the evolution of digital tools and platforms. Specifically, my research delve into the following three areas: 1) the impact of technological tools on individual work outcomes, 2) the design considerations of digital platforms at a macro level using analytical modeling, and 3) the societal effects of emerging AI technologies.
               </p>
             </div>
           </Section>
@@ -207,16 +235,16 @@ export default function About({ projects }: AboutProps) {
               </ul>
             </div>
           </Section>
+          <Section heading="Initiatives" headingAlignment="right">
+            <div className="flex flex-col w-full gap-8">
+              <p>Initiatives I have founded, co-founded, or advised. </p>
+              <Workplaces items={ventures} isAnimated />
+            </div>
+          </Section>
           <Section heading="Side Projects" headingAlignment="right">
             <div className="flex flex-col w-full gap-8">
               <p>I am also a self-taught full-stack developer. I build stuff for fun :) </p>
               <Workplaces items={sideProjects} isAnimated />
-            </div>
-          </Section>
-          <Section heading="Past Ventures" headingAlignment="right">
-            <div className="flex flex-col w-full gap-8">
-              <p>Ventures I have founded, co-founded, or advised. </p>
-              <Workplaces items={ventures} isAnimated />
             </div>
           </Section>
         </div>

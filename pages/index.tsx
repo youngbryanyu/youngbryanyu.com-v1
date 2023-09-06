@@ -19,15 +19,17 @@ type HomeProps = {
 export default function Home({ posts, projects }: HomeProps) {
   return (
     <>
-      <div className="flex flex-col gap-20 md:gap-28">
+      <div className="flex flex-col gap-20 md:gap-16">
         <div>
           <h1 className="">{`Zenan "Alan" Chen`}</h1>
           <p
-            className="text-secondary"
+            className="text-secondary max-w-md"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            IS Ph.D. Candidate, UMN Carlson<br></br>
-            For a more humane & productive future<br></br>
+            IS Ph.D. Candidate @ UMN Carlson<br></br>
+            <br></br>
+            Exploring societal ripples of tech evolution and<br></br>intricacies of platform strategies.
+            <br></br>
             <br></br>
             <Link href="https://go.zenan.ch/cv" >CV</Link> (on job market 23-24)
           </p>
@@ -38,12 +40,9 @@ export default function Home({ posts, projects }: HomeProps) {
           style={{ "--index": 2 } as React.CSSProperties}
         >
           <h2>Upcoming Talks</h2>
-          <ul className="flex flex-col gap-16">
+          <ul className="flex flex-col gap-8">
             {TalkList(futureTalks)}
           </ul>
-          <Link href="/talks" className="items-start underline">
-            See all talks
-          </Link>
         </div>
         )}
         <div
@@ -51,7 +50,7 @@ export default function Home({ posts, projects }: HomeProps) {
           style={{ "--index": 2 } as React.CSSProperties}
         >
           <h2>Selected research projects</h2>
-          <ul className="flex flex-col gap-16">
+          <ul className="flex flex-col gap-8">
             {projects.map((project) => (
               <li key={project.title} className="animate-in">
                 <Section heading={project.time}>
@@ -80,8 +79,8 @@ export default function Home({ posts, projects }: HomeProps) {
         >
           <h2>Recent blog posts</h2>
           <PostList posts={posts} />
-          <Link href="/blog" className="items-start underline">
-            See all posts
+          <Link href="/blog" className="items-start underline text-secondary">
+            Read all posts
           </Link>
         </div>
       </div>
