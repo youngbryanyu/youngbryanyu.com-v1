@@ -19,6 +19,7 @@ export default function Section({
           "md:w-28 text-secondary shrink-0",
           headingAlignment === "right" && "md:text-right"
         )}
+        suppressHydrationWarning={true}
       >
         {heading}
       </h2>
