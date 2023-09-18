@@ -1,6 +1,6 @@
-# samuelkraft.com
+# zenan.ch
 
-My personal website/portfolio/blog.
+My personal website/portfolio/blog. Modified from samuelkraft.com.
 
 ## Stack
 
