@@ -20,6 +20,7 @@ export const talks = [
   {
     conference: "Conference in Information Systems and Technology (CIST)",
     title: "Large Language Model In Creative Work",
+    award: "Best Student Paper Award Nominee",
     location: "Phoenix, Arizona",
     date: "October 14, 2023"
   },
