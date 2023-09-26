@@ -128,7 +128,11 @@ const ventures = [
 
 const awards = [
   {
-    title: "General Track Best Paper Award @ ICIS",
+    title: "Best Student Paper Nominee @ CIST",
+    time: "2023",
+  },
+  {
+    title: "Best Paper Award @ ICIS, General Track",
     time: "2022",
   },
   {
