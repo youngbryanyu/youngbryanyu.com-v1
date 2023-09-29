@@ -18,6 +18,12 @@ export const talks = [
     date: "December 13, 2023"
   },
   {
+    conference: "Conference on Digital Experimentation (CoDE) @ MIT",
+    title: "Large Language Model In Creative Work",
+    location: "Cambridge, Massachusetts",
+    date: "November 10, 2023"
+  },
+  {
     conference: "Conference in Information Systems and Technology (CIST)",
     title: "Large Language Model In Creative Work",
     award: "Best Student Paper Award Nominee",
@@ -98,7 +104,7 @@ export const talks = [
   {
     conference: "Conference on Digital Experimentation (CoDE) @ MIT",
     title: "Less is Not Always More: Investigating the Impact of Block Intensity and Immediacy of Social Media Blockers on Productivity",
-    location: "Boston, Massachusetts",
+    location: "Cambridge, Massachusetts",
     date: "October 21, 2022"
   },
   {
