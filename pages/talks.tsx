@@ -166,9 +166,9 @@ export function TalkList(talks: Talk[]) {
               </h3>
               {talk.award &&
                 <p className="text-secondary">
-                  <Image src={laurel} alt={"Award"} height={20} className="inline mr-1"></Image>
+                  <Image src={laurel} alt={"Award"} height={20} className="inline select-none mr-1 "></Image>
                   <i>{talk.award}</i>
-                  <Image src={laurel} alt={"Award"} height={20} className="inline transform -scale-x-100 ml-1"></Image>
+                  <Image src={laurel} alt={"Award"} height={20} className="inline select-none transform -scale-x-100 ml-1 "></Image>
                 </p>
               }
               <p className="text-secondary">{talk.conference}</p>
