@@ -6,8 +6,8 @@ import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/24/outline';
 import { NextSeo } from "next-seo";
 import { FullName, SiteURL } from "./about";
 import { formatDate } from "../lib/formatdate";
-import Image from "next/image";
-import laurel from "../public/laurel.leading.svg";
+import LaurelIcon from "../components/LaurelIcon";
+import Award from "../components/Award";
 
 const seoTitle = `Talks | ${FullName}`;
 const seoDesc = `Invited talks and presentations.`;
@@ -164,11 +164,10 @@ export function TalkList(talks: Talk[]) {
               <h3>
                 {talk.title}
               </h3>
+              
               {talk.award &&
                 <p className="text-secondary">
-                  <Image src={laurel} alt={"Award"} height={20} className="inline select-none mr-1 "></Image>
-                  <i>{talk.award}</i>
-                  <Image src={laurel} alt={"Award"} height={20} className="inline select-none transform -scale-x-100 ml-1 "></Image>
+                  <Award award={talk.award} />
                 </p>
               }
               <p className="text-secondary">{talk.conference}</p>

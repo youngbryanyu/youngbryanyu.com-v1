@@ -8,6 +8,7 @@ import PostList from "components/postlist";
 
 import { FullName } from "./about";
 import { talks, TalkList } from "./talks";
+import Award from "../components/Award";
 
 const futureTalks = talks.filter((talk) => new Date(talk.date) > new Date());
 
@@ -57,6 +58,13 @@ export default function Home({ posts, projects }: HomeProps) {
                   <div className="flex flex-col gap-5">
                     <div className="flex flex-col gap-1">
                       <h3>{project.title}</h3>
+                      {project.awards && 
+                        project.awards.map((award: string) => (
+                          <p key={award} className="text-secondary">
+                            <Award award={award} />
+                          </p>
+                        ))
+                      }
                       <p className="text-secondary">{project.description}</p>
                       <Link href={`/project/${project.slug}`} underline>
                         Read More
@@ -100,7 +108,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const projects = allProjects
     .sort((a, b) => parseInt(b.time.slice(0, 4)) - parseInt(a.time.slice(0, 4)))
     .map((post) =>
-    pick(post, ["slug", "title", "description", "time"])
+    pick(post, ["slug", "title", "description", "time", "awards"])
   );
 
   return {
