@@ -29,7 +29,8 @@ export default function Home({ posts, projects }: HomeProps) {
           >
             IS Ph.D. Candidate @ UMN Carlson<br></br>
             <br></br>
-            Exploring societal ripples of tech evolution and<br></br>intricacies of platform strategies.
+            Our comprehension of techologies often falls behind their adoption.
+            I study design and use of technologies to fully harness their benefits.
             <br></br>
             <br></br>
             <Link href="https://go.zenan.ch/cv" >CV</Link> (on job market 23-24)
@@ -58,6 +59,7 @@ export default function Home({ posts, projects }: HomeProps) {
                   <div className="flex flex-col gap-5">
                     <div className="flex flex-col gap-1">
                       <h3>{project.title}</h3>
+                      <p className="text-secondary">{project.description}</p>
                       {project.awards && 
                         project.awards.map((award: string) => (
                           <p key={award} className="text-secondary">
@@ -65,7 +67,6 @@ export default function Home({ posts, projects }: HomeProps) {
                           </p>
                         ))
                       }
-                      <p className="text-secondary">{project.description}</p>
                       <Link href={`/project/${project.slug}`} underline>
                         Read More
                       </Link>

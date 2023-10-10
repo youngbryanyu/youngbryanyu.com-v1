@@ -156,7 +156,7 @@ const awards = [
 
 const seoTitle = `About | ${FullName}`;
 export const seoDesc =
-  "Ph.D. candidate in Information Systems for a more humane & productive future";
+  "Ph.D. candidate in Information Systems. For a more humane & productive future.";
 
 export default function About({ projects }: AboutProps) {
   return (
@@ -200,7 +200,15 @@ export default function About({ projects }: AboutProps) {
           <Section heading="Research" headingAlignment="right">
             <div className="flex flex-col gap-6">
               <p>
-                Driven by a profound interest in the interplay between technology and society, my research vision is centered on understanding and guiding the evolution of digital tools and platforms. Specifically, my research delve into the following three areas: 1) the impact of technological tools on individual work outcomes, 2) the design considerations of digital platforms at a macro level using analytical modeling, and 3) the societal effects of emerging AI technologies.
+                Driven by the mistmatch between our understanding of technologies and the rate at which they are adopted, my research vision is centered on understanding and guiding the design and usage of emerging technologies and platforms. Specifically, my research delve into the following areas:
+              </p>
+              <ul className="list-decimal ml-10">
+                <li>the impact of technological tools on individual work outcomes,</li>
+                <li>the societal effects of emerging AI technologies, and</li>
+                <li>the design considerations of digital platforms.</li>
+              </ul>
+              <p>
+                I use a blend of methods, including field experiments, casual inference, machine learning, and analytical modeling.
               </p>
             </div>
           </Section>
