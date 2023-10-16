@@ -101,7 +101,7 @@ const ventures = [
     time: "2021 -",
     description: "MISQ-affiliated student blog for interviews",
     imageSrc: misqLogo,
-    link: "https://isjobs.xyz",
+    link: "https://www.linkedin.com/company/misqinsider/",
   },
   {
     title: "Surge.fm",
@@ -128,7 +128,7 @@ const ventures = [
 
 const awards = [
   {
-    title: "Best Student Paper Nominee @ CIST",
+    title: "Best Student Paper Runner-up @ CIST",
     time: "2023",
   },
   {

@@ -6,7 +6,6 @@ import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/24/outline';
 import { NextSeo } from "next-seo";
 import { FullName, SiteURL } from "./about";
 import { formatDate } from "../lib/formatdate";
-import LaurelIcon from "../components/LaurelIcon";
 import Award from "../components/Award";
 
 const seoTitle = `Talks | ${FullName}`;
@@ -20,6 +19,12 @@ export const talks = [
     date: "December 13, 2023"
   },
   {
+    conference: "Conference on Artificial Intelligence, Machine Learning, and Business Analytics",
+    title: "Large Language Model In Creative Work",
+    location: "Philadelphia, Pannsylvania",
+    date: "December 1, 2023"
+  },
+  {
     conference: "Conference on Digital Experimentation (CoDE) @ MIT",
     title: "Large Language Model In Creative Work",
     location: "Cambridge, Massachusetts",
@@ -28,7 +33,7 @@ export const talks = [
   {
     conference: "Conference in Information Systems and Technology (CIST)",
     title: "Large Language Model In Creative Work",
-    award: "Best Student Paper Award Nominee",
+    award: "Best Student Paper Award Runner-up",
     location: "Phoenix, Arizona",
     date: "October 14, 2023"
   },
