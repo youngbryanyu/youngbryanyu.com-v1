@@ -7,8 +7,9 @@ import Section from "components/Section";
 import PostList from "components/postlist";
 
 import { FullName } from "./about";
-import { talks, TalkList } from "./talks";
+import { TalkList } from "./talks";
 import Award from "../components/Award";
+import { talks } from "../data/talks";
 
 const futureTalks = talks.filter((talk) => new Date(talk.date) > new Date());
 
