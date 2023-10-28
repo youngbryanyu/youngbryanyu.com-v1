@@ -6,10 +6,17 @@ export const talks = [
     date: "December 9, 2023"
   },
   {
+    conference: "HKU Business School",
+    title: "Large Language Model In Creative Work",
+    location: "Hong Kong, China",
+    date: "November 2, 2023",
+    invited: true
+  },
+  {
     conference: "CUHK Business School",
     title: "Large Language Model In Creative Work",
     location: "Hong Kong, China",
-    date: "October 29, 2023",
+    date: "October 30, 2023",
     invited: true
   },
   {
