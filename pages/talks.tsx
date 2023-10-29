@@ -162,7 +162,7 @@ export default function Talks() {
             style={{ "--index": 2 } as React.CSSProperties}
           >
             <h2>Upcoming</h2>
-            <ul className="flex flex-col gap-16">
+            <ul className="flex flex-col gap-8">
               {TalkList(filteredFutureTalks)}
             </ul>
           </div>
@@ -173,7 +173,7 @@ export default function Talks() {
             style={{ "--index": 2 } as React.CSSProperties}
           >
             <h2>Past</h2>
-            <ul className="flex flex-col gap-16">
+            <ul className="flex flex-col gap-8">
               {TalkList(filteredPastTalks)}
             </ul>
           </div>
