@@ -10,6 +10,7 @@ export const talks = [
     title: "Large Language Model In Creative Work",
     location: "Hong Kong, China",
     date: "November 2, 2023",
+    link: "https://www.hkubs.hku.hk/event/how-large-language-model-in-creative-work-the-role-of-collaboration-modality-and-user-expertise/",
     invited: true
   },
   {
@@ -17,6 +18,7 @@ export const talks = [
     title: "Large Language Model In Creative Work",
     location: "Hong Kong, China",
     date: "October 30, 2023",
+    link: "https://www.bschool.cuhk.edu.hk/events/large-language-model-in-creative-work-the-role-of-collaboration-modality-and-user-expertise/",
     invited: true
   },
   {
