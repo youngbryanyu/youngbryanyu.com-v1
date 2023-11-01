@@ -1,5 +1,12 @@
 export const talks = [
   {
+    conference: "Northeastern University",
+    title: "Large Language Model In Creative Work",
+    location: "Boston, Massachusetts",
+    date: "November 22, 2023",
+    invited: true
+  },
+  {
     conference: "University of Texas at Dallas",
     title: "Large Language Model In Creative Work",
     location: "Dallas, Texas",
