@@ -1,5 +1,12 @@
 export const talks = [
   {
+    conference: "University of Texas at Dallas",
+    title: "Large Language Model In Creative Work",
+    location: "Dallas, Texas",
+    date: "November 29, 2023",
+    invited: true
+  },
+  {
     conference: "Workshop on e-Business (WeB)",
     title: "Large Language Model In Creative Work",
     location: "Hyderabad, India",
