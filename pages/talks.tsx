@@ -30,7 +30,7 @@ export function TalkList(talks: Talk[]) {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map((talk) => (
       <li key={talk.title + talk.conference + talk.date}>
-        <Section heading={formatDate(talk.date) + (talk.invited ? "*" : "")}>
+        <Section heading={talk.date + (talk.invited ? "*" : "")}>
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1">
               <h3>
