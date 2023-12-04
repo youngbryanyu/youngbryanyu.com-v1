@@ -37,7 +37,7 @@ export const talks = [
   {
     conference: "Workshop on e-Business (WeB)",
     title: "Large Language Model In Creative Work",
-    location: "Hyderabad, India",
+    location: "Online",
     date: "Dec 9, 2023"
   },
   {
@@ -59,7 +59,7 @@ export const talks = [
   {
     conference: "Workshop on Information Systems and Economics (WISE)",
     title: "Large Language Model In Creative Work",
-    location: "Hyderabad, India",
+    location: "Online",
     date: "Dec 13, 2023"
   },
   {
