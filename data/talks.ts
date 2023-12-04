@@ -1,5 +1,12 @@
 export const talks = [
   {
+    conference: "University of California, Davis",
+    title: "Large Language Model In Creative Work",
+    location: "Davis, California",
+    date: "Dec 8, 2023",
+    invited: true
+  },
+  {
     conference: "University of Rochester",
     title: "Large Language Model In Creative Work",
     location: "Rochester, New York",
