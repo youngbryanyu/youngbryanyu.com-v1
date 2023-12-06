@@ -37,6 +37,7 @@ export const talks = [
   {
     conference: "Workshop on e-Business (WeB)",
     title: "Large Language Model In Creative Work",
+    award: "Best Paper Nominee",
     location: "Online",
     date: "Dec 9, 2023"
   },
