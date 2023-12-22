@@ -128,6 +128,10 @@ const ventures = [
 
 const awards = [
   {
+    title: "Best Dissertation Award @ WITS",
+    time: "2023",
+  },
+  {
     title: "Best Student Paper Runner-up @ CIST",
     time: "2023",
   },

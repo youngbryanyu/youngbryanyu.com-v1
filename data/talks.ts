@@ -1,5 +1,12 @@
 export const talks = [
   {
+    conference: "Workshop on Information Technologies and Systems (WITS)",
+    title: "Design Considerations of Information Systems Artifacts and Digital Platforms",
+    location: "Online",
+    award: "Best Dissertation Award",
+    date: "Dec 13, 2023"
+  },
+  {
     conference: "University of California, Davis",
     title: "Large Language Model In Creative Work",
     location: "Davis, California",
