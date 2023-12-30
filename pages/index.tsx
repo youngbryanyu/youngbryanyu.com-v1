@@ -28,13 +28,14 @@ export default function Home({ posts, projects }: HomeProps) {
             className="text-secondary max-w-md"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            IS Ph.D. Candidate @ UMN Carlson<br></br>
-            <br></br>
+            IS Ph.D. Candidate @ UMN Carlson<br />
+            Incoming Assistant Professor @ UTD, JSOM<br />
+            <br />
             Our comprehension of techologies often falls behind their adoption.
             I study design and use of technologies to fully harness their benefits.
-            <br></br>
-            <br></br>
-            <Link href="https://go.zenan.ch/cv" >CV</Link> (on job market 23-24)
+            <br />
+            <br />
+            <Link href="https://go.zenan.ch/cv" >CV</Link>
           </p>
         </div>
         {futureTalks.length > 0 && (
