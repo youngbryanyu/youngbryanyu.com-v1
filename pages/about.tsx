@@ -42,7 +42,7 @@ type AboutProps = {
   projects: Project[];
 };
 
-const workplaces = [
+const education = [
   {
     title: "Ph.D. in Information Systems",
     description: "University of Minnesota",
@@ -197,7 +197,7 @@ export default function About({ projects }: AboutProps) {
           <Section heading="About me" headingAlignment="right">
             <div className="flex flex-col gap-6">
               <p>
-                <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan.
+                <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan. I am an incoming assistant professor at University of Texas at Dallas, Jindal School of Management.
               </p>
             </div>
           </Section>
@@ -228,10 +228,9 @@ export default function About({ projects }: AboutProps) {
           <Section heading="Education" headingAlignment="right">
             <div className="flex flex-col w-full gap-8">
               <p>
-                My advisor is <Link href="https://carlsonschool.umn.edu/faculty/jason-chan">Jason Chan</Link> and my co-advisor is {" "}
-                <Link href={`https://carlsonschool.umn.edu/faculty/soumya-sen`}>Soumya Sen</Link> 
+                Dissertation: <i>Design Considerations of Information Systems Artifacts and Digital Platforms</i><br />
               </p>
-              <Workplaces items={workplaces} />
+              <Workplaces items={education} />
             </div>
           </Section>
           <Section heading="Selected Awards" headingAlignment="right">
