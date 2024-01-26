@@ -124,7 +124,6 @@ function getFormattedSnowboardSeasonStats(activities: ActivityType[]) {
         activity.sport_type === "Snowboard" && isThisSeason(new Date(activity.start_date), 1)
     );
   }
-  const currentSeason = getSeasonName(isLast);
   // total time (in seconds)
   const totalTime = snowboardActivities.reduce(
     (total, activity) => total + activity.moving_time,
@@ -136,13 +135,13 @@ function getFormattedSnowboardSeasonStats(activities: ActivityType[]) {
   ).size;
   // distance (in meters)
   const totalDistance = snowboardActivities.reduce(
-    (total, activity) => total + activity.distance,
+    (total, activity) => total + activity.distance / 2, // divide by 2 to get the distance of the actual run
     0
   );
   return [
     {
       name: "Season",
-      value: currentSeason,
+      value: getSeasonName(isLast),
     },
     {
       name: "Total Distance",
