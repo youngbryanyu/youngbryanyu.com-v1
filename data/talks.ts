@@ -3,7 +3,7 @@ export const talks = [
     conference: "Annual AI in Management (AIM) Conference",
     title: "Large Language Model In Creative Work",
     location: "Los Angeles, California",
-    date: "Mar 15, 2023"
+    date: "Mar 15, 2024"
   },
   {
     conference: "Workshop on Information Technologies and Systems (WITS)",
