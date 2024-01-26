@@ -19,6 +19,7 @@
     "@radix-ui/colors": "^0.1.8",
     "@vercel/analytics": "^0.1.6",
     "@vercel/og": "^0.5.2",
+    "@vercel/speed-insights": "^1.0.8",
     "clsx": "^1.2.1",
     "contentlayer": "^0.2.9",
     "faunadb": "^4.7.1",

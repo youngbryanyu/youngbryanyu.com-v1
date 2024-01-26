@@ -4,7 +4,7 @@ const clientId = process.env.STRAVA_CLIENT_ID;
 const clientSecret = process.env.STRAVA_CLIENT_SECRET;
 const refreshToken = process.env.STRAVA_REFRESH_TOKEN;
 
-const userId = 18364318;
+const userId = 18426274;
 const TOKEN_ENDPOINT = "https://www.strava.com/oauth/token";
 const ATHLETES_ENDPOINT = `https://www.strava.com/api/v3/athletes/${userId}`;
 const ACTIVITY_ENDPOINT = "https://www.strava.com/api/v3/";
@@ -25,7 +25,6 @@ const getAccessToken = async () => {
     },
     body,
   });
-
   return response.json();
 };
 

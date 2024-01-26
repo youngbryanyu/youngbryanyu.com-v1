@@ -919,6 +919,11 @@
     satori "0.4.8"
     yoga-wasm-web "0.3.3"
 
+"@vercel/speed-insights@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.0.8.tgz#cd317fb2ce99d69d200ba66efd0122a3984e5b89"
+  integrity sha512-x1V9MHUMGkaNafmgY0qRbmbr+jfeU+Cvo5KgreeEGo63SFuBYRg9RS52GUJ9p82nEL6NBzc9HNru6fkcvufYcQ==
+
 "@xobotyi/scrollbar-width@^1.9.5":
   version "1.9.5"
   resolved "https://registry.yarnpkg.com/@xobotyi/scrollbar-width/-/scrollbar-width-1.9.5.tgz#80224a6919272f405b87913ca13b92929bdf3c4d"

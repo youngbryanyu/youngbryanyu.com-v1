@@ -5,6 +5,7 @@ import Head from "next/head";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { Inter } from "@next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import SEO from "components/seo";
 import * as gtag from "lib/gtag";
@@ -70,6 +71,7 @@ export default function MyApp({
         {getLayout(<Component {...pageProps} />)}
       </div>
       <Analytics />
+      <SpeedInsights />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossOrigin="anonymous"></link>
     </ThemeProvider>
   );

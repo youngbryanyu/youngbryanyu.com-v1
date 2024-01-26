@@ -27,6 +27,7 @@ import { GetStaticProps } from "next";
 import { Project, allProjects } from "../.contentlayer/generated";
 import { pick } from "lib/pick";
 import MDXComponents from "../components/MDXComponents";
+import { getActivities, getActivity } from "../lib/strava";
 
 export const connectLinks = [
   { label: "Email", href: "mailto:contact@zenan.ch" },
@@ -37,10 +38,6 @@ export const connectLinks = [
 
 export const FullName = "Zenan Chen";
 export const SiteURL = "https://zenan.ch";
-
-type AboutProps = {
-  projects: Project[];
-};
 
 const education = [
   {
@@ -162,7 +159,7 @@ const seoTitle = `About | ${FullName}`;
 export const seoDesc =
   "Ph.D. candidate in Information Systems. For a more humane & productive future.";
 
-export default function About({ projects }: AboutProps) {
+export default function About({ projects, activities }: { projects: Project[]; activities: ActivityType[] }) {
   return (
     <>
       <NextSeo
@@ -180,7 +177,7 @@ export default function About({ projects }: AboutProps) {
       />
       <div className="flex flex-col gap-16 md:gap-24">
         <div className="hidden sm:block">
-          <Gallery />
+          <Gallery activities={activities}/>
         </div>
         <div className="-mb-8 sm:hidden animate-in">
           <Image
@@ -276,7 +273,18 @@ export const getStaticProps: GetStaticProps = async () => {
     pick(post, ["slug", "title", "description", "time"])
   );
 
+  let activities: ActivityType[] = [];
+  try {
+    activities = await getActivities();
+  } catch (error) {
+    console.log(error);
+  }
+
   return {
-    props: { projects },
+    props: {
+      projects: projects,
+      activities: activities
+    },
+    revalidate: 3600,
   };
 };

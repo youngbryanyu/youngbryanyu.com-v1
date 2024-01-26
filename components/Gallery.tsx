@@ -8,7 +8,7 @@ import imageConf from "public/gallery/scecr.jpg";
 import imageSnowboarding from "public/gallery/snowboarding.jpg";
 import imageCam from "public/gallery/cam.jpg";
 import { ReactNode } from "react";
-import Activity, { ActivityType } from "./Activity";
+import Activity, { ActivityType, SnowboardActivity } from "./Activity";
 import Link from "./Link";
 import Halo from "./Halo";
 
@@ -136,10 +136,13 @@ function Photo({
 }
 
 export default function Gallery({
+  activities,
   lastActivity,
 }: {
+  activities: ActivityType[];
   lastActivity?: ActivityType;
-}) {
+  }) {
+  const snowboardingActivities = activities.filter((activity) => activity.sport_type === "Snowboard");
   return (
     <>
       <section className="flex gap-4 h-[268px] relative">
@@ -177,14 +180,33 @@ export default function Gallery({
         />
         <Photo
           src={imageSnowboarding}
-          meta="2023-03-25"
-          alt="Me snowboarding at Buck Hill"
-          width={270}
-          height={225}
-          rotate={-5.4}
-          left={570}
-          index={4}
-        />
+          meta={
+              snowboardingActivities.length ? (
+                <span className="flex flex-col gap-3">
+                  <span className="block">
+                    {
+                      snowboardingActivities[0].name.toString().split('-').at(-1)
+                    }
+                  </span>
+                  <Link
+                    href={`https://www.strava.com/activities/${activities[0].id}`}
+                  >
+                    See latest day on Strava ↗
+                  </Link>
+                </span>
+              ) : "Snowboarding"
+            }
+            alt='Snowboarding'
+            filename={`snowboarding.jpg`}
+            width={270}
+            height={225}
+            rotate={-5.4}
+            left={570}
+            index={4}
+            flipDirection="left"
+          >
+          {snowboardingActivities.length ? <SnowboardActivity activities={snowboardingActivities} /> : null}
+        </Photo>
       </section>
     </>
   );
