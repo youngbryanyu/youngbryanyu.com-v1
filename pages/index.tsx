@@ -47,7 +47,7 @@ export default function Home({ posts, projects }: HomeProps) {
               meta={
                 <span className="flex flex-col gap-3">
                   <span className="block">
-                    2023-08-10
+                    2023-08-10 <br />PHOTO BY XIANWEN CAO
                   </span>
                   <Link
                     href={`/about`}
