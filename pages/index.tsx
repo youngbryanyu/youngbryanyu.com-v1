@@ -6,6 +6,8 @@ import Link from "components/Link";
 import Section from "components/Section";
 import PostList from "components/postlist";
 
+import { Photo } from "components/Gallery";
+import headshot from "../public/headshot.jpeg";
 import { FullName } from "./about";
 import { TalkList } from "./talks";
 import Award from "../components/Award";
@@ -37,6 +39,32 @@ export default function Home({ posts, projects }: HomeProps) {
             <br />
             <Link href="https://go.zenan.ch/cv" >CV</Link>
           </p>
+        </div>
+        <div className="right-0 -mt-20 overflow-hidden hidden md:block">
+          <div className="-mt-[230px]">
+            <Photo
+              src={headshot}
+              meta={
+                <span className="flex flex-col gap-3">
+                  <span className="block">
+                    2023-08-10
+                  </span>
+                  <Link
+                    href={`/about`}
+                  >
+                    {`More photos ↗`}
+                  </Link>
+                </span>
+              }
+              alt="Headshot"
+              width={180}
+              height={240}
+              rotate={6.3}
+              left="calc(60% + 40px)"
+              index={1}
+              flipDirection="left"
+            />
+          </div>
         </div>
         {futureTalks.length > 0 && (
         <div

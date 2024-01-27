@@ -25,13 +25,13 @@ type PhotoProps = {
   width: number;
   height: number;
   rotate: number;
-  left: number;
+  left: number | string;
   index: number;
   flipDirection?: "left" | "right";
   children?: ReactNode;
 };
 
-function Photo({
+export function Photo({
   src,
   alt,
   filename,
@@ -153,7 +153,7 @@ export default function Gallery({
           width={314}
           height={229}
           rotate={-6}
-          left={-86}
+          left={-130}
           index={1}
         />
         <Photo
@@ -163,7 +163,7 @@ export default function Gallery({
           width={180}
           height={240}
           rotate={6.3}
-          left={198}
+          left={140}
           index={2}
           flipDirection="left"
         />
@@ -174,7 +174,7 @@ export default function Gallery({
           width={230}
           height={253}
           rotate={7.6}
-          left={343}
+          left={313}
           index={3}
           flipDirection="left"
         />
@@ -201,7 +201,7 @@ export default function Gallery({
             width={270}
             height={225}
             rotate={-5.4}
-            left={570}
+            left={500}
             index={4}
             flipDirection="left"
           >
