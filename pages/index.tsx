@@ -60,7 +60,7 @@ export default function Home({ posts, projects }: HomeProps) {
               width={180}
               height={240}
               rotate={6.3}
-              left="calc(60% + 40px)"
+              left="calc(50% + 10rem)"
               index={1}
               flipDirection="left"
             />
