@@ -43,13 +43,13 @@ const education = [
   {
     title: "Ph.D. in Information Systems",
     description: "University of Minnesota",
-    time: "2018 - 2024",
+    time: "2018 - 24",
     imageSrc: umnLogo,
   },
   {
     title: "B.A. in Economics",
     description: "CUHK, Shenzhen",
-    time: "2014 - 2018",
+    time: "2014 - 18",
     imageSrc: cuhkLogo,
   },
 ];
@@ -109,14 +109,14 @@ const ventures = [
   },
   {
     title: "浅见 (Qianjian)",
-    time: "2014 - 2018",
+    time: "2014 - 18",
     description: "Online campus media for CUHK(SZ)",
     imageSrc: qianjianLogo,
     link: "https://qianjian.space",
   },
   {
     title: "月台 (Stay)",
-    time: "2015 - 2017",
+    time: "2015 - 17",
     description: "Campus magazine for CUHK(SZ)",
     imageSrc: stayLogo,
     link: "https://qianjian.space",
