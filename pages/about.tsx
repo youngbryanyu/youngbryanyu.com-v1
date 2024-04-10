@@ -129,6 +129,10 @@ const awards = [
     time: "2023",
   },
   {
+    title: "Best Completed Research Paper Runner-up @ WeB",
+    time: "2023",
+  },
+  {
     title: "Best Student Paper Runner-up @ CIST",
     time: "2023",
   },

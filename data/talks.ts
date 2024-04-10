@@ -50,7 +50,8 @@ export const talks = [
   {
     conference: "Workshop on e-Business (WeB)",
     title: "Large Language Model In Creative Work",
-    award: "Best Paper Nominee",
+    award: "Best Completed Research Paper Runner-up",
+    link: "https://credsverse.com/credentials/982584eb-2d56-47a5-b604-d0e7ef6b5eea",
     location: "Online",
     date: "Dec 9, 2023"
   },
