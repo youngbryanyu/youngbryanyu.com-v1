@@ -53,9 +53,35 @@ export const Project = defineDocumentType(() => ({
   computedFields: projectComputedFields,
 }));
 
+const publicationComputedFields: ComputedFields = {
+  slug: {
+    type: "string",
+    resolve: (doc) => getSlug(doc),
+  },
+};
+
+export const Publication = defineDocumentType(() => ({
+  name: "Publication",
+  filePathPattern: `publication/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    description: { type: "string", required: true },
+    publishedAt: { type: "string", required: true },
+    journal: { type: "string", required: true },
+    authors: { type: "json", required: true },
+    url: { type: "string", required: false },
+    forthcoming: { type: "boolean", required: false },
+    tags: { type: "json", required: false },
+    image: { type: "string", required: false },
+    awards: { type: "json", required: false }
+  },
+  computedFields: publicationComputedFields,
+}));
+
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Post, Project],
+  documentTypes: [Post, Project, Publication],
   mdx: {
     rehypePlugins: [rehypePrism, rehypeKatex],
     remarkPlugins: [

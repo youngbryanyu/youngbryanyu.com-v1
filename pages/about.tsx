@@ -198,14 +198,14 @@ export default function About({ projects, activities }: { projects: Project[]; a
           <Section heading="About me" headingAlignment="right">
             <div className="flex flex-col gap-6">
               <p>
-                <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan. I am an incoming assistant professor at University of Texas at Dallas, Jindal School of Management.
+                <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan. I am an assistant professor at University of Texas at Dallas, Jindal School of Management. I received my Ph.D. in Business Administration (Information Systems) from University of Minnesota, Carlson School of Management.
               </p>
             </div>
           </Section>
           <Section heading="Research" headingAlignment="right">
             <div className="flex flex-col gap-6">
               <p>
-                Driven by the mistmatch between our understanding of technologies and the rate at which they are adopted, my research vision is centered on understanding and guiding the design and usage of emerging technologies and platforms. Specifically, my research delve into the following areas:
+                Driven by the mistmatch between our understanding of technologies and the rate at which they are adopted, my research vision is centered on understanding and guiding the design and usage of emerging technologies and platforms. More specifically, I am interested in the following areas:
               </p>
               <ul className="list-decimal ml-10">
                 <li>the impact of technological tools on individual work outcomes,</li>
