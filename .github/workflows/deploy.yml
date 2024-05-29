@@ -22,9 +22,9 @@ jobs:
         run: yarn install
 
       - name: Build the project
-        run: yarn build && yarn export
+        run: yarn run build
 
       - name: Deploy to GitHub Pages
-        run: yarn deploy
+        run: yarn run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
