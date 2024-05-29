@@ -7,8 +7,7 @@ import Workplaces from "components/Workplaces";
 import Gallery from "components/Gallery";
 import { ActivityType } from "components/Activity";
 
-import cuhkLogo from "public/schools/CUHK.png";
-import umnLogo from "public/schools/UMN.png";
+import purdueLogo from "public/schools/purdue.png";
 
 import githubLogo from "public/Github.png";
 import jupyterLogo from "public/projects/jupyter.png";
@@ -30,27 +29,26 @@ import MDXComponents from "../components/MDXComponents";
 import { getActivities, getActivity } from "../lib/strava";
 
 export const connectLinks = [
-  { label: "Email", href: "mailto:contact@zenan.ch" },
-  { label: "Twitter", href: "https://twitter.com/chzenan" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/chzenan/" },
-  { label: "GitHub", href: "https://github.com/alanzchen" }
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/youngbryanyu/" },
+  { label: "GitHub", href: "https://github.com/youngbryanyu" },
+  { label: "Email", href: "mailto:youngyu19@gmail.com" },
 ];
 
-export const FullName = "Zenan Chen";
-export const SiteURL = "https://zenan.ch";
+export const FullName = "Young Bryan Yu";
+export const SiteURL = "https://zenan.ch"; // TODO: change
 
 const education = [
   {
-    title: "Ph.D. in Information Systems",
-    description: "University of Minnesota",
-    time: "2018 - 24",
-    imageSrc: umnLogo,
+    title: "M.S. in Computer Science",
+    description: "Purdue University",
+    time: "Aug 2024 - Present",
+    imageSrc: purdueLogo,
   },
   {
-    title: "B.A. in Economics",
-    description: "CUHK, Shenzhen",
-    time: "2014 - 18",
-    imageSrc: cuhkLogo,
+    title: "B.S. in Computer Science",
+    description: "Purdue University",
+    time: "Aug 2020 - Dec 2023",
+    imageSrc: purdueLogo,
   },
 ];
 
@@ -198,7 +196,7 @@ export default function About({ projects, activities }: { projects: Project[]; a
           <Section heading="About me" headingAlignment="right">
             <div className="flex flex-col gap-6">
               <p>
-                <em className="font-semibold">Hi!</em>&nbsp; My name is Zenan (泽南) Chen (陈), I usually go by Alan. I am an assistant professor at University of Texas at Dallas, Jindal School of Management. I received my Ph.D. in Business Administration (Information Systems) from University of Minnesota, Carlson School of Management.
+                <em className="font-semibold">Hi!</em>&nbsp; My name is Young Bryan Yu. I am pursuing a M.S. in Computer Science at Purdue University. I received my B.S. in Computer Science from Purdue University as well.
               </p>
             </div>
           </Section>

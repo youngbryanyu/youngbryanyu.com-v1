@@ -6,7 +6,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dgtzuqphqg23d.cloudfront.net",
+        hostname: "dgtzuqphqg23d.cloudfront.net", // TODO: remove?
       },
       { protocol: "https", hostname: "image.mux.com" },
     ],

@@ -26,19 +26,18 @@ export default function Home({ posts, projects, publications }: HomeProps) {
     <>
       <div className="flex flex-col gap-20 md:gap-16">
         <div>
-          <h1 className="">{`Zenan "Alan" Chen`}</h1>
+          <h1 className="">{`Young Bryan Yu`}</h1>
           <p
             className="text-secondary max-w-md"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            Assistant Professor @ UTD, JSOM<br />
-            Ph.D. @ UMN, CSOM<br />
+            Software Engineer Intern @ KeyByte LLC<br />
+            M.S. in Computer Science @ Purdue University<br />
             <br />
-            Our comprehension of techologies often falls behind their adoption.
-            I study design and use of technologies to fully harness their benefits.
+            I am interested in distributed systems, databases, and computing.
             <br />
             <br />
-            <Link href="https://go.zenan.ch/cv" >CV</Link>
+            <Link href="https://drive.google.com/file/d/1p-FvixBI4vU1n9HNTT0J_pcvMgQ7EQg-/view?usp=sharing" >Resume</Link>
           </p>
         </div>
         <div className="right-0 -mt-20 overflow-hidden hidden md:block">
@@ -48,7 +47,7 @@ export default function Home({ posts, projects, publications }: HomeProps) {
               meta={
                 <span className="flex flex-col gap-3">
                   <span className="block">
-                    2023-08-10 <br />PHOTO BY XIANWEN CAO
+                    2021-04-21 <br />PHOTO BY JASON KWOK
                   </span>
                   <Link
                     href={`/about`}
