@@ -28,6 +28,7 @@ jobs:
         run: |
           git config --global user.email "youngyu19@gmail.com"
           git config --global user.name "Young Yu"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/youngbryanyu/youngbryanyu.github.io.git
 
       - name: Deploy to GitHub Pages
         run: yarn run deploy
