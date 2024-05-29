@@ -12,6 +12,8 @@ const nextConfig = {
         //     { protocol: "https", hostname: "image.mux.com" },
         // ],
     },
+    output: 'export',
+    distDir: 'out',
     webpack: (config, { isServer }) => {
         if (isServer) {
             require("./scripts/generate-sitemap");
