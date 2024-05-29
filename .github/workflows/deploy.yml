@@ -24,6 +24,11 @@ jobs:
       - name: Build the project
         run: yarn run build
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "youngyu19@gmail.com"
+          git config --global user.name "Young Yu"
+
       - name: Deploy to GitHub Pages
         run: yarn run deploy
         env:
