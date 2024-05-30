@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
           `,
             }}
           />
-          <link href="https://github.com/alanzchen" rel="me" />
+          <link href="https://github.com/youngbryanyu" rel="me" />
         </Head>
         <body>
           <Main />
