@@ -157,7 +157,9 @@ export default function About({ projects, activities }: { projects: Project[]; a
                                 Hi! My name is Young Bryan Yu. I am pursuing a MS in Computer Science at Purdue University. I received my BS in Computer Science from Purdue University as well.
                             </p>
                             <p>
-                                Currently, I am working at startup KeyByte LLC on database and VM tuning technologies. I have also worked at Amazon building services for Alexa devices.
+                                Currently, I am working at startup at{" "}
+                                <Link href="https://keybyte.xyz">KeyByte LLC</Link>{" "}on database and VM tuning technologies. I have also worked at {" "}
+                                <Link href="https://amazon.com">Amazon</Link>{" "} building services for Alexa devices.
                             </p>
                             <p>
                                 When I am not working I enjoy working out and playing all kinds of sports. I also enjoy reading and dabble in poker. I love traveling as well.

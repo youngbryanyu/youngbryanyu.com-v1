@@ -37,7 +37,30 @@ export default function Home({ posts, projects, publications }: HomeProps) {
                         I am most interested in distributed systems, databases, and computing.
                         <br />
                         <br />
-                        <Link href="https://drive.google.com/file/d/1p-FvixBI4vU1n9HNTT0J_pcvMgQ7EQg-/view?usp=sharing" >Resume</Link>
+                        <ul>
+                            <li>
+                                <Link href="https://drive.google.com/file/d/1p-FvixBI4vU1n9HNTT0J_pcvMgQ7EQg-/view?usp=sharing" >
+                                    Resume
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="https://linkedin.com/in/youngbryanyu" >
+                                    LinkedIn
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="https://github.com/youngbryanyu" >
+                                    GitHub
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="mailto:youngyu19@gmail.com" >
+                                    Email
+                                </Link>
+                            </li>
+                        </ul>
+
+
                     </p>
                 </div>
                 <div className="right-0 -mt-20 overflow-hidden hidden md:block">
@@ -47,7 +70,7 @@ export default function Home({ posts, projects, publications }: HomeProps) {
                             meta={
                                 <span className="flex flex-col gap-3">
                                     <span className="block">
-                                        2021-04-21 <br />PHOTO BY JASON KWOK
+                                        2021-04-21 <br />IN LA HONDA, CA
                                     </span>
                                     <Link
                                         href={`/about`}
@@ -151,12 +174,12 @@ export default function Home({ posts, projects, publications }: HomeProps) {
 
 
                                         </div> */}
-                                        {/* <Link href={`/project/${project.slug}`}>
+                {/* <Link href={`/project/${project.slug}`}>
                       {project.slug === "tracklib" && <TracklibGraphic />}
                       {project.slug === "bitrefill" && <BitrefillGraphic />}
                       {project.slug === "trailroutes" && <TrailRoutesGraphic />}
                     </Link> */}
-                                    {/* </div>
+                {/* </div>
                                 </Section>
                             </li>
                         ))}
