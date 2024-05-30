@@ -9,10 +9,11 @@ import { ActivityType } from "components/Activity";
 
 import purdueLogo from "public/schools/purdue.jpg";
 
+import fudstopsLogo from "public/projects/fudstops.png";
 import titanLogo from "public/projects/titan_logo.png";
-import openaiLogo from "public/projects/openai-logo.png";
-import nosediveLogo from "public/projects/nosedive.png";
-import canvasLogo from "public/projects/canvas.png";
+import githubLogo from "public/projects/github.png";
+import npmLogo from "public/projects/npm.png";
+
 import keybyteLogo from "public/ventures/keybyte.png";
 import amazonLogo from "public/ventures/amazon.jpg";
 
@@ -88,14 +89,14 @@ const sideProjects = [
         title: "SimpliStash",
         time: "2024",
         description: "A simple in-memory key-value database with a custom TCP-based protocol supporting features like TTL, LRU eviction, snapshots to disk, single-leader replication, off-heap storage, and a CLI",
-        imageSrc: openaiLogo,
+        imageSrc: githubLogo,
         link: "https://github.com/youngbryanyu/SimpliStash",
     },
     {
         title: "simple-app-config",
         time: "2024",
         description: "A simple easy-to-use configuration manager package for Node.js applications",
-        imageSrc: canvasLogo,
+        imageSrc: npmLogo,
         link: "https://github.com/youngbryanyu/simple-app-config"
     },
     {
@@ -109,7 +110,7 @@ const sideProjects = [
         title: "Füdstops: Dining Recommendations for Students",
         time: "2022",
         description: "A dining court menu web application for Purdue students supporting features like recommendations, dietary preferences, ratings, popular menu items, search, filtering, and notifications",
-        imageSrc: nosediveLogo,
+        imageSrc: fudstopsLogo,
         link: "https://github.com/youngbryanyu/fudstops",
     }
 ];
@@ -213,12 +214,12 @@ export default function About({ projects, activities }: { projects: Project[]; a
                             </ul>
                         </div>
                     </Section>
-                    {/* <Section heading="Projects" headingAlignment="right">
+                    <Section heading="Projects" headingAlignment="right">
                         <div className="flex flex-col w-full gap-8">
                             <p>Projects I have built.</p>
                             <Workplaces items={sideProjects} isAnimated />
                         </div>
-                    </Section> */}
+                    </Section>
                 </div>
             </div>
         </>
