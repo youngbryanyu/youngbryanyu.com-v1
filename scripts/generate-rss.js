@@ -4,7 +4,7 @@ const path = require("path");
 const RSS = require("rss");
 const matter = require("gray-matter");
 
-const FullName = "Zenan Chen";
+const FullName = "Young Bryan Yu";
 
 async function generate() {
   const feed = new RSS({

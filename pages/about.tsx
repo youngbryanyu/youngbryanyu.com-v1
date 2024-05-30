@@ -116,7 +116,7 @@ const sideProjects = [
 
 const seoTitle = `About | ${FullName}`;
 export const seoDesc =
-    "Ph.D. candidate in Information Systems. For a more humane & productive future.";
+    "MS in Computer Science at Purdue University. Interested in Distributed Systems, Databases, and Computing at Scale.";
 
 export default function About({ projects, activities }: { projects: Project[]; activities: ActivityType[] }) {
     return (
