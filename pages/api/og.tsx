@@ -27,11 +27,7 @@ export default async function handler(request: NextRequest) {
                     alignItems: 'center',
                 }}
             >
-                {/* <img
-          width="256"
-          height="256"
-          src={`${SiteURL}/avatar.png`}
-        /> */}
+                {/* Use next/Image over img for better performance */}
                 <Image
                     src={`${SiteURL}/avatar.png`}
                     alt={`${FullName} avatar`}
