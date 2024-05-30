@@ -3,7 +3,7 @@ const { withContentlayer } = require("next-contentlayer"); // eslint-disable-lin
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        unoptimized: false,
+        unoptimized: true,
     },
     webpack: (config, { isServer }) => {
         if (isServer) {
