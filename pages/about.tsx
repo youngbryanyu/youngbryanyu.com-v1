@@ -46,14 +46,14 @@ const ventures = [
     {
         title: "Software Development Engineer Intern",
         time: "2023",
-        description: "Amazon",
+        description: "Amazon\nAlexa Food",
         imageSrc: amazonLogo,
         link: "https://amazon.com/",
     },
     {
         title: "Software Development Engineer Intern",
         time: "2022",
-        description: "Amazon",
+        description: "Amazon\nAlexa Kitchen",
         imageSrc: amazonLogo,
         link: "https://amazon.com/",
     }
