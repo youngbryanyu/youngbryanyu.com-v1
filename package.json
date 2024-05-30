@@ -9,7 +9,7 @@
     "lint": "next lint",
     "type-check": "./node_modules/.bin/tsc",
     "cache-clear": "./node_modules/.bin/contentlayer build --verbose --clearCache",
-    "deploy": "vercel"
+    "deploy": "vercel && vercel --prod"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",

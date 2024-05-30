@@ -84,7 +84,7 @@ const awards = [
     }
 ];
 
-const sideProjects = [
+const personalProjects = [
     {
         title: "SimpliStash",
         time: "2024",
@@ -214,10 +214,10 @@ export default function About({ projects, activities }: { projects: Project[]; a
                             </ul>
                         </div>
                     </Section>
-                    <Section heading="Projects" headingAlignment="right">
+                    <Section heading="Personal Projects" headingAlignment="right">
                         <div className="flex flex-col w-full gap-8">
-                            <p>Projects I have built.</p>
-                            <Workplaces items={sideProjects} isAnimated />
+                            <p>Personal projects I have built for fun.</p>
+                            <Workplaces items={personalProjects} isAnimated />
                         </div>
                     </Section>
                 </div>
