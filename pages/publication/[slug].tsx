@@ -53,7 +53,7 @@ export default function Publication({ publication, rest }: PublicationProps) {
             </div>
             <div className="flex gap-0">
               {publication.authors.map((author: string, index: number) =>
-                <span key={author} className={`text-${author == 'Zenan Chen' ? "primary" : "secondary"}`}>
+                <span key={author} className={`text-${author == 'Young Bryan Yu' ? "primary" : "secondary"}`}>
                   {index != 0 && <span className="text-secondary">,&nbsp;</span>}
                   {author}
                 </span>

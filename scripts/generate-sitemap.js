@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { sync } = require("globby");
-const SiteURL = "https://zenan.ch";
+const SiteURL = "https://youngbryanyu.com";
 
 function addPage(page) {
   const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");

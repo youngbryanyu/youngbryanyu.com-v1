@@ -32,7 +32,7 @@ export const connectLinks = [
 ];
 
 export const FullName = "Young Bryan Yu";
-export const SiteURL = "https://zenan.ch"; // TODO: change
+export const SiteURL = "https://youngbryanyu.com";
 
 const ventures = [
     {

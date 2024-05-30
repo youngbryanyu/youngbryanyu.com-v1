@@ -16,11 +16,6 @@ const config = {
       },
     ],
   },
-  twitter: {
-    handle: "@chzenan",
-    site: "@chzenan",
-    cardType: "summary_large_image",
-  },
 };
 
 export default function SEO() {

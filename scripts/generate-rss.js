@@ -9,8 +9,8 @@ const FullName = "Young Bryan Yu";
 async function generate() {
   const feed = new RSS({
     title: FullName,
-    site_url: "https://zenan.ch",
-    feed_url: "https://zenan.ch/feed.xml",
+    site_url: "https://youngbryanyu.com",
+    feed_url: "https://youngbryanyu.com/feed.xml",
   });
 
   const posts = await fs.readdir(path.join(__dirname, "..", "data", "blog"));
@@ -24,7 +24,7 @@ async function generate() {
 
       feed.item({
         title: frontmatter.data.title,
-        url: "https://zenan.ch/blog/" + name.replace(/\.mdx?/, ""),
+        url: "https://youngbryanyu.com/blog/" + name.replace(/\.mdx?/, ""),
         date: frontmatter.data.publishedAt,
         description: frontmatter.data.summary,
       });
