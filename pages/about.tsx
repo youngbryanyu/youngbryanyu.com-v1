@@ -153,7 +153,10 @@ export default function About({ projects, activities }: { projects: Project[]; a
                     <Section heading="About me" headingAlignment="right">
                         <div className="flex flex-col gap-6">
                             <p>
-                                <em className="font-semibold">Hi!</em>&nbsp; My name is Young Bryan Yu. I am pursuing a M.S. in Computer Science at Purdue University. I received my B.S. in Computer Science from Purdue University as well.
+                                Hi! My name is Young Bryan Yu. I am pursuing a M.S. in Computer Science at Purdue University. I received my B.S. in Computer Science from Purdue University as well.
+                            </p>
+                            <p>
+                                When I am not working I enjoy working out and playing all kinds of sports. I also enjoy reading and dabble in poker. I love traveling as well.
                             </p>
                         </div>
                     </Section>
@@ -187,9 +190,9 @@ export default function About({ projects, activities }: { projects: Project[]; a
                     <Section heading="Education" headingAlignment="right">
                         <div className="flex flex-col w-full gap-8">
                             <p>
-                            Where I have studied.
-                {/* Dissertation: <i>Design Considerations of Information Systems Artifacts and Digital Platforms</i><br /> */}
-              </p>
+                                Where I have studied.
+                                {/* Dissertation: <i>Design Considerations of Information Systems Artifacts and Digital Platforms</i><br /> */}
+                            </p>
                             <Workplaces items={education} isAnimated />
                         </div>
                     </Section>

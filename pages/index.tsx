@@ -32,7 +32,7 @@ export default function Home({ posts, projects, publications }: HomeProps) {
                         style={{ "--index": 1 } as React.CSSProperties}
                     >
                         SWE Intern @ KeyByte LLC<br />
-                        M.S. in Computer Science @ Purdue University<br />
+                        MSCS @ Purdue University<br />
                         <br />
                         I am interested in distributed systems, databases, and computing.
                         <br />
