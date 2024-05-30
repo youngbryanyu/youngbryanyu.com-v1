@@ -12,8 +12,6 @@ const nextConfig = {
         //     { protocol: "https", hostname: "image.mux.com" },
         // ],
     },
-    output: 'export',
-    distDir: 'out',
     webpack: (config, { isServer }) => {
         if (isServer) {
             require("./scripts/generate-sitemap");
@@ -45,11 +43,3 @@ const nextConfig = {
 };
 
 module.exports = withContentlayer(nextConfig);
-
-// module.exports = {
-//     images: {
-//         unoptimized: true,
-//     },
-//     output: 'export',
-//     distDir: 'out',
-// };

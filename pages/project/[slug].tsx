@@ -46,7 +46,7 @@ export default function Project({ project, rest }: ProjectProps) {
               {project.url && (
                 <>
                   <span>&middot;</span>
-                  <Link href={project.url}>Read Paper ↗</Link>
+                  <Link href={project.url}>See more ↗</Link>
                 </>
               )}
             </div>

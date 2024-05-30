@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import cn from "clsx";
 import localFont from "@next/font/local";
 
-import imageMe from "public/gallery/me.jpg";
-import imageConf from "public/gallery/scecr.jpg";
-import imageSnowboarding from "public/gallery/snowboarding.jpg";
-import imageCam from "public/gallery/cam.jpg";
+import imageChicago from "public/gallery/chicago.jpg";
+import imagePhotography from "public/gallery/photography.jpg";
+import imageSedona from "public/gallery/sedona.jpg";
+import imageAlviso from "public/gallery/alviso.jpg";
 import { ReactNode } from "react";
 import Activity, { ActivityType, SnowboardActivity } from "./Activity";
 import Link from "./Link";
@@ -147,39 +147,51 @@ export default function Gallery({
     <>
       <section className="flex gap-4 h-[268px] relative">
         <Photo
-          src={imageMe}
-          meta="2022-10-02"
-          alt="Me, by Xianwen Cao"
-          width={314}
-          height={229}
+          src={imageChicago}
+          meta="2023"
+          alt="Me in Chicago, by Young Bryan Yu"
+          width={200}
+          height={250}
           rotate={-6}
-          left={-130}
+          left={-50}
           index={1}
+          flipDirection="left"
         />
         <Photo
-          src={imageConf}
-          meta="2022-06-21"
-          alt="At SCECR 2022"
+          src={imageSedona}
+          meta="2022"
+          alt="Me in Sedona, by Young Bryan Yu"
           width={180}
           height={240}
-          rotate={6.3}
+          rotate={6}
           left={140}
           index={2}
           flipDirection="left"
         />
         <Photo
-          src={imageCam}
-          meta="2020-10-22"
-          alt={"Me with my camera and my long hair"}
+          src={imagePhotography}
+          meta="2021"
+          alt={"Me with my camera, by Young Bryan Yu"}
           width={230}
           height={253}
-          rotate={7.6}
+          rotate={-6}
           left={313}
           index={3}
           flipDirection="left"
         />
         <Photo
-          src={imageSnowboarding}
+          src={imageAlviso}
+          meta="2020"
+          alt="Me in Alviso, by Young Bryan Yu"
+          width={220}
+          height={240}
+          rotate={6}
+          left={500}
+          index={4}
+          flipDirection="left"
+        />
+        {/* <Photo
+          src={imagePhotography}
           meta={
               snowboardingActivities.length ? (
                 <span className="flex flex-col gap-3">
@@ -206,7 +218,7 @@ export default function Gallery({
             flipDirection="left"
           >
           {snowboardingActivities.length ? <SnowboardActivity activities={snowboardingActivities} /> : null}
-        </Photo>
+        </Photo> */}
       </section>
     </>
   );

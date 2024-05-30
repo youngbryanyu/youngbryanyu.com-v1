@@ -8,8 +8,9 @@ import { FullName } from "../pages/about";
 const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Talks", href: "/talks" },
+//   { label: "Talks", href: "/talks" },
   { label: "Blog", href: "/blog" },
+  // TODO: add publications section
 ];
 
 export default function Header() {
