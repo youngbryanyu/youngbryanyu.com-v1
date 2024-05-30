@@ -154,7 +154,7 @@ export default function About({ projects, activities }: { projects: Project[]; a
                     <Section heading="About me" headingAlignment="right">
                         <div className="flex flex-col gap-6">
                             <p>
-                                Hi! My name is Young Bryan Yu. I am pursuing a M.S. in Computer Science at Purdue University. I received my B.S. in Computer Science from Purdue University as well.
+                                Hi! My name is Young Bryan Yu. I am pursuing a MS in Computer Science at Purdue University. I received my BS in Computer Science from Purdue University as well.
                             </p>
                             <p>
                                 Currently, I am working at startup KeyByte LLC on database and VM tuning technologies. I have also worked at Amazon building services for Alexa devices.
@@ -167,7 +167,7 @@ export default function About({ projects, activities }: { projects: Project[]; a
                     <Section heading="Interests" headingAlignment="right">
                         <div className="flex flex-col gap-6">
                             <p>
-                                I am interested in the following areas:
+                                I am most interested in the following areas:
                             </p>
                             <ul className="list-decimal ml-10">
                                 <li>Distributed Systems</li>

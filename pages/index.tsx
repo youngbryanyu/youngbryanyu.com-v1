@@ -34,7 +34,7 @@ export default function Home({ posts, projects, publications }: HomeProps) {
                         SWE Intern @ KeyByte LLC<br />
                         MSCS @ Purdue University<br />
                         <br />
-                        I am interested in distributed systems, databases, and computing.
+                        I am most interested in distributed systems, databases, and computing.
                         <br />
                         <br />
                         <Link href="https://drive.google.com/file/d/1p-FvixBI4vU1n9HNTT0J_pcvMgQ7EQg-/view?usp=sharing" >Resume</Link>
