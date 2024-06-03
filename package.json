@@ -29,7 +29,7 @@
     "globby": "11.1.0",
     "mdx-embed": "^1.1.2",
     "next": "13.4.4",
-    "next-contentlayer": "^0.2.9",
+    "next-contentlayer": "^0.3.3",
     "next-seo": "^5.15.0",
     "next-themes": "^0.2.1",
     "random-words": "^1.2.1",
